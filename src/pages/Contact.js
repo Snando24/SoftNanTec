@@ -21,11 +21,13 @@ const Contact = () => {
     e.preventDefault();
     
     const phoneNumber = "51906098021";
-    const text = `*Nuevo Protocolo de Comunicación - SoftNanTec*\n\n` +
-                 `*Nombre:* ${formData.name}\n` +
-                 `*Email:* ${formData.email}\n` +
-                 `*Servicio:* ${formData.service}\n` +
-                 `*Descripción:* ${formData.message}`;
+    const text = `*Solicitud de Consultoría Técnica | SoftNanTec*\n\n` +
+                 `*Información del Cliente:*\n` +
+                 `• *Nombre:* ${formData.name}\n` +
+                 `• *Email:* ${formData.email}\n\n` +
+                 `*Detalles del Proyecto:*\n` +
+                 `• *Servicio:* ${formData.service}\n` +
+                 `• *Descripción:* ${formData.message}`;
     
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
@@ -162,7 +164,7 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button type="submit" className="w-full py-6 bg-white text-brand-950 font-bold uppercase tracking-[0.2em] hover:bg-brand-green transition-all duration-300 rounded-2xl flex items-center justify-center gap-3 shadow-xl">
-                Enviar Protocolo de Comunicación <Send size={20} />
+                Solicitar Análisis Técnico <Send size={20} />
               </button>
             </form>
           </div>
