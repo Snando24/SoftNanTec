@@ -1,4 +1,3 @@
-import React from 'react';
 import { ExternalLink, Code2, Smartphone, Globe, ArrowUpRight } from 'lucide-react';
 
 const Projects = () => {

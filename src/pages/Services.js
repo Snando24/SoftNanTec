@@ -4,8 +4,6 @@ import {
   BarChart3, 
   Layers, 
   Cloud, 
-  Shield, 
-  Search,
   CheckCircle2,
   ArrowRight
 } from 'lucide-react';

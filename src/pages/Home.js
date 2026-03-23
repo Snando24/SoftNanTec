@@ -1,17 +1,11 @@
-import React from 'react';
 import { 
   ArrowUpRight, 
   Code2, 
   BarChart3, 
   Layers, 
-  Cloud, 
-  Shield, 
-  Search,
   CheckCircle2,
   Users,
   Building2,
-  Mail,
-  Phone,
   ChevronRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';

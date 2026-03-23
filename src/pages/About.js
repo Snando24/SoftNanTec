@@ -1,5 +1,4 @@
-import React from 'react';
-import { Users, Building2, CheckCircle2, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { Users, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const About = () => {
