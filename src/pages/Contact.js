@@ -1,6 +1,38 @@
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    service: 'Desarrollo de APIs & Backend',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const phoneNumber = "51906098021";
+    const text = `*Nuevo Protocolo de Comunicación - SoftNanTec*\n\n` +
+                 `*Nombre:* ${formData.name}\n` +
+                 `*Email:* ${formData.email}\n` +
+                 `*Servicio:* ${formData.service}\n` +
+                 `*Descripción:* ${formData.message}`;
+    
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <div className="pt-32 pb-20 bg-brand-950 min-h-screen">
       <div className="container mx-auto px-6 lg:px-12">
@@ -33,7 +65,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-500">Escríbanos</p>
-                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">corporate@softnantec.com</p>
+                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">softnantec@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -42,7 +74,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-500">Llamada Directa</p>
-                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">+34 912 345 678</p>
+                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">+51 906 098 021</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -51,7 +83,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-500">Ubicación HQ</p>
-                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">Madrid, España</p>
+                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">Huancayo, Perú</p>
                   </div>
                 </div>
               </div>
@@ -76,20 +108,41 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="p-10 lg:p-16 glass rounded-[3rem] border border-white/5 shadow-2xl">
             <h3 className="text-2xl font-bold text-white mb-10 font-display">Solicitar Análisis Inicial</h3>
-            <form className="space-y-8">
+            <form className="space-y-8" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Nombre Completo</label>
-                  <input type="text" className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all" placeholder="Ej: Roberto García" />
+                  <input 
+                    type="text" 
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all" 
+                    placeholder="Ej: Roberto García" 
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Email Corporativo</label>
-                  <input type="email" className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all" placeholder="rgarcia@empresa.com" />
+                  <input 
+                    type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all" 
+                    placeholder="rgarcia@empresa.com" 
+                    required
+                  />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Servicio de Interés</label>
-                <select className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all">
+                <select 
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all"
+                >
                   <option className="bg-brand-950">Desarrollo de APIs & Backend</option>
                   <option className="bg-brand-950">Diseño de Arquitectura</option>
                   <option className="bg-brand-950">Consultoría Técnica Senior</option>
@@ -98,7 +151,15 @@ const Contact = () => {
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Descripción del Proyecto</label>
-                <textarea rows="4" className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all resize-none" placeholder="Cuéntenos brevemente sobre sus objetivos..."></textarea>
+                <textarea 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows="4" 
+                  className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all resize-none" 
+                  placeholder="Cuéntenos brevemente sobre sus objetivos..."
+                  required
+                ></textarea>
               </div>
               <button type="submit" className="w-full py-6 bg-white text-brand-950 font-bold uppercase tracking-[0.2em] hover:bg-brand-green transition-all duration-300 rounded-2xl flex items-center justify-center gap-3 shadow-xl">
                 Enviar Protocolo de Comunicación <Send size={20} />
