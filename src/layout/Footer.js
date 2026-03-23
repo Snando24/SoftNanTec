@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Code2, Instagram, Youtube, MessageCircle } from 'lucide-react';
+import { Instagram, Youtube, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const phoneNumber = "34912345678";
