@@ -11,8 +11,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
           <div>
             <Link to="/" className="flex items-center space-x-3 mb-6">
-              <div className="w-8 h-8 bg-brand-green rounded flex items-center justify-center">
-                <Code2 className="text-brand-950 w-5 h-5" />
+              <div className="w-12 h-12 flex items-center justify-center">
+                <img 
+                  src="/Logo_Madre.png" 
+                  alt="SoftNanTec Logo" 
+                  className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
               </div>
               <span className="text-xl font-extrabold tracking-tight text-white font-display uppercase leading-none">SOFTNANTEC</span>
             </Link>
@@ -33,8 +37,8 @@ const Footer = () => {
               <span className="text-xs font-bold uppercase tracking-widest text-white">Social</span>
               <div className="flex gap-4">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-brand-green transition-all" title="WhatsApp"><MessageCircle size={20} /></a>
-                <a href="#" className="text-slate-500 hover:text-brand-green transition-all" title="Instagram"><Instagram size={20} /></a>
-                <a href="#" className="text-slate-500 hover:text-brand-green transition-all" title="YouTube"><Youtube size={20} /></a>
+                <a href="https://instagram.com/softnantec" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-brand-green transition-all" title="Instagram"><Instagram size={20} /></a>
+                <a href="https://youtube.com/@softnantec" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-brand-green transition-all" title="YouTube"><Youtube size={20} /></a>
               </div>
             </div>
           </div>

@@ -21,8 +21,12 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled || location.pathname !== '/' ? 'glass py-4 shadow-2xl' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3 cursor-pointer group">
-          <div className="w-10 h-10 bg-brand-green rounded-lg flex items-center justify-center transition-transform group-hover:rotate-12">
-            <Code2 className="text-brand-950 w-6 h-6" />
+          <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-110">
+            <img 
+              src="/Logo_Madre.png" 
+              alt="SoftNanTec Logo" 
+              className="w-full h-full object-contain"
+            />
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-extrabold tracking-tight text-white font-display uppercase leading-none">SOFTNANTEC</span>
