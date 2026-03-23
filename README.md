@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# SoftNanTec | Ingeniería de Software • Arquitectura Escalable
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Construimos sistemas escalables de alto rendimiento.**  
+**Soluciones diseñadas para escalar, mantenerse resilientes y operar de forma eficiente en producción.**
 
-## Available Scripts
+SoftNanTec es una consultora de ingeniería de software enfocada en diseñar y construir sistemas resilientes, APIs de alta disponibilidad y soluciones tecnológicas para empresas que necesitan escalar su infraestructura de forma segura y eficiente.
 
-In the project directory, you can run:
+## 🧠 Enfoque
 
-### `npm start`
+Trabajamos con principios de ingeniería orientados a producción: **rendimiento, escalabilidad, mantenibilidad y resiliencia**. No solo desarrollamos software — mostramos cómo lo hacemos.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 💡 ¿Qué nos diferencia?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Ingeniería real, no solo presentaciones**: Nos enfocamos en el código y la arquitectura que funciona en producción.
+- **Enfoque en arquitectura escalable desde el inicio**: Diseñamos pensando en el crecimiento futuro de su negocio.
+- **Transparencia técnica**: Compartimos nuestros procesos y decisiones de ingeniería (Engineering Lab).
+- **Ejecución eficiente y enfocada en resultados**: Procesos optimizados que priorizan impacto sin fricción innecesaria.
 
-### `npm test`
+## 💼 Servicios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Desarrollo de APIs y backend escalable**: Soluciones de alto rendimiento con arquitecturas modernas.
+- **Diseño de arquitectura de software**: Estructuras robustas preparadas para el crecimiento global.
+- **Consultoría técnica para sistemas complejos**: Resolución de desafíos técnicos de alta dificultad.
+- **Modernización de plataformas legacy**: Transformación de sistemas existentes hacia tecnologías de vanguardia.
 
-### `npm run build`
+## 🧱 Plataforma Web
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Plataforma Multi-página**: Navegación fluida y profesional diseñada para comunicar valor estratégico.
+- **Enfoque en soluciones reales**: Arquitectura frontend preparada para integrarse con backends complejos y servicios cloud.
+- **Base Escalable**: Estructura de componentes modular que permite crecer hacia productos empresariales robustos.
+- **Optimización SEO & Social**: Configuración avanzada para captar leads orgánicos y generar autoridad en el mercado.
+- **Diseño Corporativo Premium**: Estética minimalista que proyecta confianza, seriedad y alta capacidad técnica.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧩 ¿A quién ayudamos?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Empresas Enterprise** que necesitan sistemas robustos y escalables.
+- **Startups en crecimiento** que requieren una base técnica sólida.
+- **Equipos técnicos** que buscan modernizar su arquitectura.
 
-### `npm run eject`
+## 🛠️ Stack Tecnológico
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Frontend**: React.js, Tailwind CSS
+- **Arquitectura**: Clean Architecture, Component-Based Design
+- **Backend (en evolución)**: Node.js, Go, APIs REST
+- **Infraestructura (futuro)**: Cloud & servicios escalables
+- **SEO & Metadata**: Open Graph, optimización para indexación
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📈 SoftNanTec Insights
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+SoftNanTec Insights es nuestro laboratorio público de ingeniería. Aquí compartimos cómo diseñamos, construimos y escalamos sistemas reales, conectando directamente nuestra práctica de ingeniería con contenido técnico real:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Arquitecturas backend en producción** (Go, Rust, Node.js).
+- **Diseño de APIs escalables y seguras**.
+- **Análisis de decisiones técnicas** en proyectos reales de la consultora.
 
-## Learn More
+## 💻 Instalación y Desarrollo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/tu-usuario/softnantec.git
+cd softnantec
+npm install
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📞 Contacto
 
-### Code Splitting
+¿Necesitas diseñar o escalar una solución tecnológica?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+SoftNanTec puede ayudarte a construir sistemas preparados para el crecimiento. Visita nuestra sección de contacto en la web o escríbenos directamente.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 SoftNanTec
 
-### Making a Progressive Web App
+**Construimos sistemas reales. Mostramos cómo lo hacemos.**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+© SoftNanTec. Todos los derechos reservados.
