@@ -58,6 +58,7 @@ No aplica. HTTPS obligatorio en el hosting.
 ## 12. Dependencias
 
 - Ejecutar `npm audit --omit=dev` periódicamente `[PENDIENTE: no ejecutado en esta revisión]`.
+- **No ejecutar `npm audit fix --force`:** con CRA reemplaza `react-scripts` por la versión 0.0.0 y rompe el build (ocurrió el 2026-10-19). Revisar los avisos manualmente.
 - `react-scripts` 5 (CRA) está deprecado; sus dependencias de build acumulan avisos de vulnerabilidad que en su mayoría afectan solo al entorno de desarrollo.
 
 ## 13. APIs
