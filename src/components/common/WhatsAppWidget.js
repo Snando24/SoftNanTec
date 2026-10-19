@@ -13,7 +13,7 @@ const WhatsAppWidget = () => {
       aria-label="Contactar por WhatsApp"
     >
       <div className="absolute -top-12 right-0 bg-white text-brand-950 px-4 py-2 rounded-xl text-xs font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-brand-green/20">
-        ¿En qué podemos ayudarte?
+        ¿En qué podemos ayudarle?
       </div>
       <MessageCircle size={32} fill="currentColor" />
     </a>

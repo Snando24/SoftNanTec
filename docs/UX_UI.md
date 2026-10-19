@@ -60,6 +60,7 @@ Mantener los tokens anteriores; no introducir colores nuevos sin necesidad.
 
 ## 10. Contenido
 
-- Mezcla de "tú" (Navbar, TechInsights) y "usted" (Contacto, Inicio) `[POR DEFINIR tono]`.
-- Mezcla de español e inglés en etiquetas de servicios ("System Design", "Legacy Refactoring").
+- Tono: se trata al visitante de **usted** en todo el sitio ("Contáctenos", "su proyecto"). Mantenerlo en textos nuevos.
+- Idioma: etiquetas en español; solo se conservan términos técnicos habituales (API, backend, legacy, CI/CD, GraphQL).
+- Contenido honesto (2026-10-19): sin afirmaciones de tamaño de equipo, alcance global ni tecnologías no confirmadas; publicar solo cifras y proyectos con evidencia.
 - Afirmaciones absolutas reformuladas (2026-10-19): "Nuestro objetivo es responder en menos de 24 horas" y "escalar a medida que su negocio crece".

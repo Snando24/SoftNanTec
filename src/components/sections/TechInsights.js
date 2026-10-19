@@ -1,5 +1,6 @@
 import { Youtube, PlayCircle, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { SOCIAL } from '../../config/site';
 
 const TechInsights = () => {
   return (
@@ -39,12 +40,12 @@ const TechInsights = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="bg-red-600 text-white px-10 py-5 rounded-full font-bold hover:bg-red-700 transition-all flex items-center justify-center gap-3 w-fit shadow-xl shadow-red-900/20">
+              <a href={SOCIAL.youtube} target="_blank" rel="noopener noreferrer" className="bg-red-600 text-white px-10 py-5 rounded-full font-bold hover:bg-red-700 transition-all flex items-center justify-center gap-3 w-fit shadow-xl shadow-red-900/20">
                 Explorar contenido técnico <ArrowUpRight size={20} />
               </a>
               <div className="max-w-[200px]">
                 <p className="text-sm text-slate-400 font-medium leading-snug">
-                  ¿Quieres implementar algo similar en tu empresa? <Link to="/contacto" className="text-red-500 font-bold hover:underline">Contáctanos</Link>
+                  ¿Quiere implementar algo similar en su empresa? <Link to="/contacto" className="text-red-500 font-bold hover:underline">Contáctenos</Link>
                 </p>
               </div>
             </div>

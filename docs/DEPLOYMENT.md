@@ -7,7 +7,7 @@
 | Entorno | Propósito | URL/Host | Datos |
 |---|---|---|---|
 | Local | Desarrollo | `http://localhost:3000` (`npm start`) | Sin datos |
-| Preview | Revisión de cambios | [POR DEFINIR] — Vercel genera URLs de preview si el proyecto está conectado a GitHub `[POR CONFIRMAR]` | Sin datos |
+| Preview | Revisión de cambios | URL generada por Vercel en cada push a una rama | Sin datos |
 | Production | Producción | https://softnantec.com/ | Sin datos personales almacenados |
 
 ## 2. Infraestructura
@@ -30,7 +30,7 @@ Ninguna.
 ## 5. Proceso de despliegue
 
 - Build: `npm run build` → carpeta `build/` (preset Create React App).
-- Método de despliegue (Git conectado o CLI): [POR CONFIRMAR].
+- Método de despliegue: Vercel conectado a GitHub (`Snando24/SoftNanTec`). Cada push a una rama genera un preview; el merge a `main` publica en producción.
 - Configuración versionada en `vercel.json`:
   - `rewrites`: toda ruta sin archivo estático sirve `index.html` (necesario para `BrowserRouter`).
   - Cabeceras de seguridad: `Content-Security-Policy`, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`.
@@ -60,7 +60,15 @@ Vercel publica cada despliegue de forma atómica.
 
 ## 10. Estado observado (2026-10-19)
 
-La versión publicada es **anterior** a los cambios de esta revisión: muestra el bloque de cifras, el número de WhatsApp de ejemplo (`34912345678`) y no tiene `sitemap.xml` ni cabeceras CSP. Se actualizará al desplegar los cambios.
+Versión reestructurada publicada en producción (merge del PR `reestructuracion-proyecto`). Verificado en https://softnantec.com/:
+
+- [x] Cabeceras: CSP, `X-Frame-Options: DENY`, `nosniff`, `Referrer-Policy`, `Permissions-Policy` y HSTS.
+- [x] `/sitemap.xml` devuelve XML; `robots.txt` lo referencia; `/og-image.jpg` disponible.
+- [x] Rutas `/sobre-nosotros`, `/proyectos`, `/contacto`, `/privacidad` y 404 (`noindex`) cargan sin errores en consola (sin violaciones de CSP).
+- [x] Botones de WhatsApp apuntan a `wa.me/51906098021`; sin bloque de cifras.
+- [x] Google Fonts carga correctamente bajo la CSP.
+
+Despliegue confirmado: Vercel conectado a GitHub (despliegues de preview por rama y producción desde `main`).
 
 ## 11. Responsables
 

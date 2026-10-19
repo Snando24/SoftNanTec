@@ -82,7 +82,7 @@ const Contact = () => {
                     <Phone size={24} className="text-brand-950" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-400">Llamada Directa</p>
+                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-400">Teléfono / WhatsApp</p>
                     <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">{CONTACT.phoneDisplay}</p>
                   </div>
                 </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                     <MapPin size={24} className="text-brand-950" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-400">Ubicación HQ</p>
+                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-400">Ubicación</p>
                     <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">{CONTACT.location}</p>
                   </div>
                 </div>
@@ -104,12 +104,12 @@ const Contact = () => {
                   <MessageCircle size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white">Soporte Express</h4>
+                  <h4 className="font-bold text-white">Tiempo de respuesta</h4>
                   <p className="text-sm text-slate-400">Nuestro objetivo es responder en menos de 24 horas.</p>
                 </div>
               </div>
               <p className="text-slate-400 font-light italic leading-relaxed">
-                "Nuestros especialistas técnicos revisarán su solicitud y prepararán un análisis inicial antes de nuestra primera sesión de consultoría."
+                "Revisaremos su solicitud y prepararemos un análisis inicial antes de nuestra primera reunión."
               </p>
             </div>
           </div>
@@ -161,7 +161,7 @@ const Contact = () => {
                 >
                   <option className="bg-brand-950">Desarrollo de APIs & Backend</option>
                   <option className="bg-brand-950">Diseño de Arquitectura</option>
-                  <option className="bg-brand-950">Consultoría Técnica Senior</option>
+                  <option className="bg-brand-950">Consultoría Técnica</option>
                   <option className="bg-brand-950">Modernización de Sistemas</option>
                 </select>
               </div>

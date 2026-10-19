@@ -5,7 +5,7 @@ import usePageMeta from '../hooks/usePageMeta';
 const Projects = () => {
   usePageMeta({
     title: "Proyectos | SoftNanTec",
-    description: "Casos de éxito de SoftNanTec: proyectos de software diseñados y desarrollados para nuestros clientes.",
+    description: "Proyectos de software diseñados y desarrollados por SoftNanTec para sus clientes.",
     path: "/proyectos",
   });
 
@@ -26,10 +26,10 @@ const Projects = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mb-24">
           <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 font-display tracking-tight leading-tight">
-            Casos de <span className="neon-text-gradient">Éxito</span>
+            Proyectos <span className="neon-text-gradient">Realizados</span>
           </h1>
           <p className="text-xl text-slate-400 font-light leading-relaxed max-w-2xl">
-            Explora cómo hemos ayudado a diversas empresas a transformar sus operaciones y alcanzar sus objetivos estratégicos mediante soluciones tecnológicas a medida.
+            Proyectos de software que hemos diseñado y desarrollado para nuestros clientes, con enlace al resultado en producción.
           </p>
         </div>
 
@@ -100,12 +100,12 @@ const Projects = () => {
 
         {/* CTA Section */}
         <div className="mt-40 p-12 lg:p-20 glass rounded-[3rem] text-center border border-white/5">
-          <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-8 font-display">¿Tu próximo éxito comienza aquí?</h2>
+          <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-8 font-display">¿Tiene un proyecto en mente?</h2>
           <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light">
-            Estamos listos para aplicar nuestra experiencia técnica en tu próximo gran desafío.
+            Cuéntenos su idea y le ayudaremos a definir la mejor solución técnica.
           </p>
           <Link to="/contacto" className="bg-brand-green text-brand-950 px-12 py-5 rounded-full font-bold text-xl hover:shadow-[0_0_40px_rgba(163,230,53,0.3)] transition-all inline-flex items-center gap-3">
-            Hablemos de tu Proyecto <ArrowUpRight size={24} />
+            Hablemos de su proyecto <ArrowUpRight size={24} />
           </Link>
         </div>
       </div>

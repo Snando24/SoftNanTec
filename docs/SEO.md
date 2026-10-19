@@ -58,7 +58,9 @@ Ver `PERFORMANCE.md`.
 
 ## 10. Medición
 
-Search Console `[POR DEFINIR]`.
+- Indexación (verificado 2026-10-19 con `site:softnantec.com`): Google tiene indexadas `/`, `/servicios`, `/proyectos` y `/sobre-nosotros`, todavía con la descripción global anterior; se actualizará al recrawlear.
+- Search Console: el responsable indica que ya está configurado. No hay token visible en el sitio (sin meta `google-site-verification`, sin archivo HTML ni registro TXT en el dominio), por lo que la verificación no se pudo confirmar desde fuera. Pendiente: confirmar en Search Console que la propiedad sigue verificada, enviar `https://softnantec.com/sitemap.xml` y solicitar indexación de `/contacto` y `/privacidad`.
+- Google Business Profile: no aparece en los resultados locales de "SoftNanTec Huancayo" (2026-10-19) `[POR CONFIRMAR]`.
 
 ## 11. Checklist
 

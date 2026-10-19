@@ -48,7 +48,7 @@ Lema del sitio: "Construimos sistemas escalables de alto rendimiento" / "Constru
 |---|---|---|---|
 | Desarrollo de APIs & Backend | Arquitecturas de alto rendimiento | B2B | Activo (según sitio) |
 | Diseño de Arquitectura | System design y planificación de escalabilidad | B2B | Activo (según sitio) |
-| Consultoría Técnica Senior | Acompañamiento en decisiones técnicas | B2B | Activo (según sitio) |
+| Consultoría Técnica | Acompañamiento en decisiones técnicas | B2B | Activo (según sitio) |
 | Modernización de Sistemas | Migración de plataformas legacy | B2B | Activo (según sitio) |
 
 # 6. Modelo de negocio
