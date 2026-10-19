@@ -9,9 +9,17 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-// import TechInsights from '../components/TechInsights'; // Activar cuando el canal de YT esté listo
+import { buildWhatsAppUrl } from '../config/site';
+import usePageMeta from '../hooks/usePageMeta';
+// import TechInsights from '../components/sections/TechInsights'; // Activar cuando el canal de YT esté listo
 
 const Home = () => {
+  usePageMeta({
+    title: "SoftNanTec | Construimos Sistemas Escalables de Alto Rendimiento",
+    description: "SoftNanTec: Soluciones diseñadas para escalar, mantenerse resilientes y operar de forma eficiente en producción. Ingeniería de software de alto rendimiento.",
+    path: "/",
+  });
+
   const services = [
     {
       title: "Desarrollo de APIs & Backend",
@@ -62,7 +70,7 @@ const Home = () => {
             
             <div className="flex flex-col sm:flex-row items-center gap-6 mb-12">
               <a 
-                href="https://wa.me/34912345678?text=Hola%20SoftNanTec%2C%20me%20gustar%C3%ADa%20solicitar%20una%20consulta%20tecnol%C3%B3gica%20para%20mi%20proyecto."
+                href={buildWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-brand-green text-brand-950 px-10 py-5 rounded-full font-bold text-lg hover:shadow-[0_0_40px_rgba(163,230,53,0.3)] transition-all flex items-center justify-center gap-3"
@@ -110,29 +118,10 @@ const Home = () => {
                 <div key={i} className="space-y-3">
                   <div className="h-1 w-12 bg-brand-green/30"></div>
                   <h4 className="text-white font-bold uppercase text-xs tracking-widest">{item.label}</h4>
-                  <p className="text-sm text-slate-500 font-light">{item.desc}</p>
+                  <p className="text-sm text-slate-400 font-light">{item.desc}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-24 border-y border-white/5 bg-brand-900/30">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
-            {[
-              { label: "Proyectos Entregados", value: "150+" },
-              { label: "Tasa de Retención", value: "98%" },
-              { label: "Expertos IT", value: "45+" },
-              { label: "Países de Impacto", value: "12" }
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <p className="text-4xl lg:text-5xl font-extrabold text-white mb-2 font-display">{stat.value}</p>
-                <p className="text-sm text-slate-500 uppercase tracking-widest font-bold">{stat.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -246,7 +235,7 @@ const Home = () => {
                 <h2 className="text-4xl font-extrabold mb-8 font-display leading-tight">Iniciemos una <br />Conversación</h2>
                 <p className="text-lg mb-12 font-medium opacity-80">Estamos listos para analizar sus desafíos tecnológicos y proponer soluciones de alto impacto.</p>
                 <a 
-                  href="https://wa.me/34912345678?text=Hola%20SoftNanTec%2C%20me%20gustar%C3%ADa%20solicitar%20una%20consulta%20tecnol%C3%B3gica%20para%20mi%20proyecto."
+                  href={buildWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-950 text-white px-8 py-4 rounded-full font-bold inline-flex items-center gap-3 hover:bg-white hover:text-brand-950 transition-all"
@@ -267,7 +256,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* SoftNanTec Insights Section - Ready but deactivated (See components/TechInsights.js) */}
+      {/* SoftNanTec Insights Section - Ready but deactivated (ver components/sections/TechInsights.js) */}
       {/* <TechInsights /> */}
     </div>
   );

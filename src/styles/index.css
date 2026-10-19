@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -22,12 +20,6 @@ h1, h2, h3, h4, .font-display {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-light {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar {
@@ -55,4 +47,22 @@ h1, h2, h3, h4, .font-display {
 
 .text-glow-red {
   text-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+/* Accesibilidad: foco visible para navegación por teclado */
+:focus-visible {
+  outline: 2px solid #a3e635;
+  outline-offset: 3px;
+}
+
+/* Accesibilidad: respetar la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,13 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './layout/Navbar';
-import Footer from './layout/Footer';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
-import WhatsAppWidget from './components/WhatsAppWidget';
-import ScrollToTop from './components/ScrollToTop';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import NotFound from './pages/NotFound';
+import WhatsAppWidget from './components/common/WhatsAppWidget';
+import ScrollToTop from './components/common/ScrollToTop';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/sobre-nosotros" element={<About />} />
             <Route path="/proyectos" element={<Projects />} />
             <Route path="/contacto" element={<Contact />} />
+            <Route path="/privacidad" element={<PrivacyPolicy />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <WhatsAppWidget />
