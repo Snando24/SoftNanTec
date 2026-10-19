@@ -1,9 +1,8 @@
 import { MessageCircle } from 'lucide-react';
+import { buildWhatsAppUrl } from '../../config/site';
 
 const WhatsAppWidget = () => {
-  const phoneNumber = "34912345678"; // Número de ejemplo, puedes cambiarlo
-  const message = encodeURIComponent("Hola SoftNanTec, me gustaría solicitar una consulta tecnológica para mi proyecto.");
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  const whatsappUrl = buildWhatsAppUrl();
 
   return (
     <a 

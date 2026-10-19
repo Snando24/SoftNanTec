@@ -1,33 +1,23 @@
-import { ExternalLink, Code2, Smartphone, Globe, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Globe, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 
 const Projects = () => {
+  usePageMeta({
+    title: "Proyectos | SoftNanTec",
+    description: "Casos de éxito de SoftNanTec: proyectos de software diseñados y desarrollados para nuestros clientes.",
+    path: "/proyectos",
+  });
+
   const projects = [
     {
       title: "TractoTec",
-      category: "Arquitectura de E-commerce & Logística",
-      description: "Diseño y desarrollo de una plataforma escalable para la gestión de repuestos pesados. Implementamos una arquitectura modular que permitió la integración fluida con sistemas ERP y una gestión de inventario en tiempo real con alta disponibilidad.",
-      image: "https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?auto=format&fit=crop&q=80&w=2070",
+      category: "Sitio Web Corporativo",
+      description: "Sitio web corporativo para TractoTec Servicios Generales, taller de Huancayo especializado en traccionamiento de chasis, fabricación industrial y mantenimiento de maquinaria pesada. Incluye catálogo de servicios, portafolio de trabajos con página de detalle y galería de imágenes, panel de administración para que el cliente publique sus proyectos y formulario de cotización que envía la solicitud por WhatsApp. Optimizado para posicionamiento local y dispositivos móviles.",
+      image: "/images/projects/tractotec.jpg",
       link: "https://www.tractotec.com",
-      tags: ["React", "Node.js", "ERP Architecture", "Scalable Systems"],
+      tags: ["React", "Vite", "Tailwind CSS", "Supabase", "Vercel"],
       icon: <Globe className="text-brand-green" size={24} />
-    },
-    {
-      title: "Fintech Nexus",
-      category: "Infraestructura de Pagos Crítica",
-      description: "Desarrollo de una arquitectura de microservicios resiliente para el procesamiento de transacciones internacionales. Enfocado en la seguridad multicapa y la consistencia de datos en entornos distribuidos de alta carga.",
-      image: "https://images.unsplash.com/photo-1551288049-bbda48658a7d?auto=format&fit=crop&q=80&w=2070",
-      link: "#",
-      tags: ["Go", "Kubernetes", "Distributed Systems", "Security"],
-      icon: <Code2 className="text-brand-green" size={24} />
-    },
-    {
-      title: "HealthConnect Data Hub",
-      category: "Healthcare Architecture",
-      description: "Modernización de un ecosistema de salud mediante la implementación de un hub de datos centralizado y APIs seguras. Optimizamos la interoperabilidad entre centros médicos garantizando el cumplimiento de normativas de privacidad internacionales.",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=2070",
-      link: "#",
-      tags: ["Python", "Cloud Architecture", "Data Integrity", "API Design"],
-      icon: <Smartphone className="text-brand-green" size={24} />
     }
   ];
 
@@ -51,12 +41,13 @@ const Projects = () => {
                 <div className="aspect-video bg-slate-900">
                   <img 
                     src={project.image} 
-                    alt={project.title} 
+                    alt={`Proyecto ${project.title}`}
+                    loading="lazy"
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                {project.link !== "#" && (
+                {project.link && (
                   <a 
                     href={project.link} 
                     target="_blank" 
@@ -90,7 +81,7 @@ const Projects = () => {
                   ))}
                 </div>
 
-                {project.link !== "#" ? (
+                {project.link ? (
                   <a 
                     href={project.link} 
                     target="_blank" 
@@ -100,7 +91,7 @@ const Projects = () => {
                     Ver Proyecto en Vivo <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </a>
                 ) : (
-                  <span className="text-slate-500 font-bold text-lg italic italic">Proyecto bajo acuerdo de confidencialidad</span>
+                  <span className="text-slate-400 font-bold text-lg italic">Proyecto bajo acuerdo de confidencialidad</span>
                 )}
               </div>
             </div>
@@ -113,9 +104,9 @@ const Projects = () => {
           <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light">
             Estamos listos para aplicar nuestra experiencia técnica en tu próximo gran desafío.
           </p>
-          <a href="/contacto" className="bg-brand-green text-brand-950 px-12 py-5 rounded-full font-bold text-xl hover:shadow-[0_0_40px_rgba(163,230,53,0.3)] transition-all inline-flex items-center gap-3">
+          <Link to="/contacto" className="bg-brand-green text-brand-950 px-12 py-5 rounded-full font-bold text-xl hover:shadow-[0_0_40px_rgba(163,230,53,0.3)] transition-all inline-flex items-center gap-3">
             Hablemos de tu Proyecto <ArrowUpRight size={24} />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

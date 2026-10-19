@@ -1,7 +1,14 @@
 import { Users, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 
 const About = () => {
+  usePageMeta({
+    title: "Sobre Nosotros | SoftNanTec",
+    description: "SoftNanTec nace con un propósito claro: construir sistemas escalables de alto rendimiento. Conozca nuestra filosofía de ingeniería.",
+    path: "/sobre-nosotros",
+  });
+
   return (
     <div className="pt-32 pb-20 bg-brand-950 min-h-screen">
       <div className="container mx-auto px-6 lg:px-12">
@@ -26,7 +33,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-24 items-center mb-32">
           <div className="relative">
             <div className="aspect-[4/5] bg-slate-900 rounded-[3rem] overflow-hidden relative group shadow-2xl border border-white/5">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center grayscale opacity-40 transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-60"></div>
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=75&w=1200')] bg-cover bg-center grayscale opacity-40 transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-60"></div>
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent"></div>
             </div>
             <div className="absolute -bottom-10 -right-10 glass p-8 rounded-3xl hidden sm:block max-w-[320px] shadow-2xl border border-white/10">
@@ -51,7 +58,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-white font-display">Talento Senior</h4>
-                  <p className="text-sm text-slate-500 font-light leading-relaxed">Equipos compuestos por expertos en arquitectura y sistemas distribuidos.</p>
+                  <p className="text-sm text-slate-400 font-light leading-relaxed">Equipos compuestos por expertos en arquitectura y sistemas distribuidos.</p>
                 </div>
               </div>
               <div className="flex flex-col gap-4 p-8 glass rounded-3xl border border-white/5 hover:border-brand-green/30 transition-colors">
@@ -60,7 +67,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-2 text-white font-display">Enfoque en Resultados</h4>
-                  <p className="text-sm text-slate-500 font-light leading-relaxed">Procesos optimizados que priorizan impacto real sin fricción innecesaria.</p>
+                  <p className="text-sm text-slate-400 font-light leading-relaxed">Procesos optimizados que priorizan impacto real sin fricción innecesaria.</p>
                 </div>
               </div>
             </div>

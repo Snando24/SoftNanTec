@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { NAV_ITEMS } from '../../config/site';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,13 +18,22 @@ const Navbar = () => {
     setIsMenuOpen(false);
   }, [location]);
 
+  useEffect(() => {
+    if (!isMenuOpen) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') setIsMenuOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isMenuOpen]);
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled || location.pathname !== '/' ? 'glass py-4 shadow-2xl' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3 cursor-pointer group">
           <div className="w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-110">
             <img 
-              src="/Logo_Madre.png" 
+              src="/logo96.png" 
               alt="SoftNanTec Logo" 
               className="w-full h-full object-contain"
             />
@@ -36,12 +46,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-10">
-          {[
-            { name: 'Inicio', path: '/' },
-            { name: 'Servicios', path: '/servicios' },
-            { name: 'Sobre Nosotros', path: '/sobre-nosotros' },
-            { name: 'Proyectos', path: '/proyectos' }
-          ].map((item) => (
+          {NAV_ITEMS.map((item) => (
             <Link 
               key={item.name} 
               to={item.path} 
@@ -56,20 +61,22 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button
+          type="button"
+          className="md:hidden text-white"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+        >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full glass border-t border-white/5 py-8 px-6 space-y-6 shadow-2xl animate-in fade-in slide-in-from-top-4">
-          {[
-            { name: 'Inicio', path: '/' },
-            { name: 'Servicios', path: '/servicios' },
-            { name: 'Sobre Nosotros', path: '/sobre-nosotros' },
-            { name: 'Proyectos', path: '/proyectos' }
-          ].map((item) => (
+        <div id="mobile-menu" className="md:hidden absolute top-full left-0 w-full glass border-t border-white/5 py-8 px-6 space-y-6 shadow-2xl animate-in fade-in slide-in-from-top-4">
+          {NAV_ITEMS.map((item) => (
             <Link 
               key={item.name} 
               to={item.path} 

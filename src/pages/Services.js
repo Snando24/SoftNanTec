@@ -8,8 +8,15 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 
 const Services = () => {
+  usePageMeta({
+    title: "Servicios | SoftNanTec",
+    description: "Desarrollo de APIs y backend, diseño de arquitectura, consultoría técnica y modernización de sistemas legacy.",
+    path: "/servicios",
+  });
+
   const services = [
     {
       title: "Desarrollo de APIs & Backend",
@@ -28,7 +35,7 @@ const Services = () => {
       title: "Diseño de Arquitectura",
       id: "architecture",
       description: "Estructuras resilientes preparadas para el crecimiento.",
-      longDescription: "Diseñamos el plano técnico de su éxito. Creamos infraestructuras de software que no solo resuelven los problemas de hoy, sino que están preparadas para escalar sin límites mañana.",
+      longDescription: "Diseñamos el plano técnico de su éxito. Creamos infraestructuras de software que no solo resuelven los problemas de hoy, sino que están preparadas para escalar a medida que su negocio crece.",
       icon: <Layers size={32} className="text-brand-green" />,
       features: [
         "System Design & Scalability Planning",

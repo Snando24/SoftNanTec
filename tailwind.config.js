@@ -13,17 +13,8 @@ module.exports = {
         brand: {
           950: "#020617",
           900: "#0f172a",
-          800: "#1e293b",
-          green: "#a3e635",
+          green: "#a3e635", // Lima neón del logo
         },
-        dark: "#020617",
-        accent: "#a3e635", // Lima neón del logo
-        neon: {
-          green: "#a3e635",
-          cyan: "#22d3ee",
-        },
-        primary: "#0f172a",
-        secondary: "#38bdf8",
       }
     },
   },

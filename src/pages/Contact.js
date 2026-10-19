@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
+import { CONTACT, buildWhatsAppUrl } from '../config/site';
+import usePageMeta from '../hooks/usePageMeta';
 
 const Contact = () => {
+  usePageMeta({
+    title: "Contacto | SoftNanTec",
+    description: "¿Necesita diseñar o escalar una solución tecnológica? Contacte a SoftNanTec por WhatsApp o correo para un análisis inicial.",
+    path: "/contacto",
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,7 +29,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const phoneNumber = "51906098021";
     const text = `*Solicitud de Consultoría Técnica | SoftNanTec*\n\n` +
                  `*Información del Cliente:*\n` +
                  `• *Nombre:* ${formData.name}\n` +
@@ -29,8 +37,7 @@ const Contact = () => {
                  `• *Servicio:* ${formData.service}\n` +
                  `• *Descripción:* ${formData.message}`;
     
-    const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+    const whatsappUrl = buildWhatsAppUrl(text);
     
     window.open(whatsappUrl, '_blank');
   };
@@ -44,7 +51,7 @@ const Contact = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
             </span>
-            Protocolo de Consultoría Técnica
+            Consultoría Técnica Especializada
           </div>
           <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 font-display tracking-tight leading-tight">
             Diseñemos su <span className="neon-text-gradient">Arquitectura</span> del Mañana
@@ -66,8 +73,8 @@ const Contact = () => {
                     <Mail size={24} className="text-brand-950" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-500">Escríbanos</p>
-                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">softnantec@gmail.com</p>
+                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-400">Escríbanos</p>
+                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">{CONTACT.email}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -75,8 +82,8 @@ const Contact = () => {
                     <Phone size={24} className="text-brand-950" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-500">Llamada Directa</p>
-                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">+51 906 098 021</p>
+                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-400">Llamada Directa</p>
+                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">{CONTACT.phoneDisplay}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -84,8 +91,8 @@ const Contact = () => {
                     <MapPin size={24} className="text-brand-950" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-500">Ubicación HQ</p>
-                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">Huancayo, Perú</p>
+                    <p className="text-xs uppercase font-bold tracking-widest mb-1 text-slate-400">Ubicación HQ</p>
+                    <p className="text-xl font-bold text-white group-hover:text-brand-green transition-colors">{CONTACT.location}</p>
                   </div>
                 </div>
               </div>
@@ -98,7 +105,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-white">Soporte Express</h4>
-                  <p className="text-sm text-slate-500">Respuesta en T-minus 24h garantizada.</p>
+                  <p className="text-sm text-slate-400">Nuestro objetivo es responder en menos de 24 horas.</p>
                 </div>
               </div>
               <p className="text-slate-400 font-light italic leading-relaxed">
@@ -113,37 +120,44 @@ const Contact = () => {
             <form className="space-y-8" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Nombre Completo</label>
+                  <label htmlFor="contact-name" className="text-xs font-bold uppercase tracking-widest text-slate-400">Nombre Completo</label>
                   <input 
+                    id="contact-name"
                     type="text" 
                     name="name"
+                    autoComplete="name"
+                    maxLength={100}
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all" 
+                    className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green transition-all" 
                     placeholder="Ej: Roberto García" 
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Email Corporativo</label>
+                  <label htmlFor="contact-email" className="text-xs font-bold uppercase tracking-widest text-slate-400">Email Corporativo</label>
                   <input 
+                    id="contact-email"
                     type="email" 
                     name="email"
+                    autoComplete="email"
+                    maxLength={254}
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all" 
+                    className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green transition-all" 
                     placeholder="rgarcia@empresa.com" 
                     required
                   />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Servicio de Interés</label>
+                <label htmlFor="contact-service" className="text-xs font-bold uppercase tracking-widest text-slate-400">Servicio de Interés</label>
                 <select 
+                  id="contact-service"
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all"
+                  className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green transition-all"
                 >
                   <option className="bg-brand-950">Desarrollo de APIs & Backend</option>
                   <option className="bg-brand-950">Diseño de Arquitectura</option>
@@ -152,13 +166,15 @@ const Contact = () => {
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-slate-500">Descripción del Proyecto</label>
+                <label htmlFor="contact-message" className="text-xs font-bold uppercase tracking-widest text-slate-400">Descripción del Proyecto</label>
                 <textarea 
+                  id="contact-message"
                   name="message"
+                  maxLength={2000}
                   value={formData.message}
                   onChange={handleChange}
                   rows="4" 
-                  className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green outline-none transition-all resize-none" 
+                  className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green transition-all resize-none" 
                   placeholder="Cuéntenos brevemente sobre sus objetivos..."
                   required
                 ></textarea>
@@ -166,6 +182,12 @@ const Contact = () => {
               <button type="submit" className="w-full py-6 bg-white text-brand-950 font-bold uppercase tracking-[0.2em] hover:bg-brand-green transition-all duration-300 rounded-2xl flex items-center justify-center gap-3 shadow-xl">
                 Solicitar Análisis Técnico <Send size={20} />
               </button>
+              <p className="text-sm text-slate-400 leading-relaxed">
+                Al enviar, se abrirá WhatsApp en una nueva pestaña con su mensaje listo para enviar. ¿Prefiere correo? Escríbanos a{' '}
+                <a href={`mailto:${CONTACT.email}`} className="text-brand-green font-semibold hover:underline">{CONTACT.email}</a>.
+                {' '}Consulte cómo tratamos sus datos en nuestra{' '}
+                <Link to="/privacidad" className="text-brand-green font-semibold hover:underline">Política de Privacidad</Link>.
+              </p>
             </form>
           </div>
         </div>

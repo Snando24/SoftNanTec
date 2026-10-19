@@ -11,7 +11,7 @@ const TechInsights = () => {
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-600/10 border border-red-600/20 text-red-500 text-xs font-bold uppercase tracking-widest mb-4">
               <Youtube size={16} /> SoftNanTec Insights
             </div>
-            <p className="text-slate-500 text-xs font-bold uppercase tracking-[0.2em] mb-8 ml-1">
+            <p className="text-slate-400 text-xs font-bold uppercase tracking-[0.2em] mb-8 ml-1">
               Contenido técnico basado en proyectos reales de SoftNanTec
             </p>
             
@@ -52,7 +52,7 @@ const TechInsights = () => {
           
           <div className="lg:w-1/2 w-full">
             <div className="aspect-video bg-slate-900 rounded-[2.5rem] border border-white/10 overflow-hidden relative group cursor-pointer shadow-2xl">
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-40"></div>
+              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=75&w=1200')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-40"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-125 transition-transform duration-500 shadow-2xl shadow-red-600/40">
                   <PlayCircle size={48} className="text-white ml-1" fill="currentColor" />
