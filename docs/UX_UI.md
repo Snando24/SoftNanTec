@@ -24,7 +24,7 @@ Definido en `tailwind.config.js` y `src/styles/index.css`:
 - Bordes: radios grandes (`rounded-2xl` a `rounded-[3rem]`).
 - Iconografía: lucide-react.
 
-- Logo: maestro en `assets/brand/Logo_Madre.png`; derivados en `public/` (`logo96.png` para Navbar/Footer, `logo192/512.png`, `favicon.ico`, `og-image.jpg`).
+- Logo: maestro en `assets/brand/Logo_Madre.png` (con texto) y `assets/brand/Emblema.png` (solo el emblema). Navbar/Footer y `og-image.jpg` usan el logo completo; `favicon.ico`, `favicon-48.png` y `logo192/512.png` usan el emblema para que sea legible en tamaños pequeños.
 
 ## 4. Componentes
 
