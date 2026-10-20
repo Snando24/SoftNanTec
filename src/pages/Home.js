@@ -23,21 +23,21 @@ const Home = () => {
   const services = [
     {
       title: "Desarrollo de APIs & Backend",
-      description: "Soluciones de alto rendimiento con arquitecturas modernas preparadas para el tráfico global.",
+      description: "Soluciones de alto rendimiento con arquitecturas modernas preparadas para crecer con su negocio.",
       icon: <Code2 className="w-6 h-6 text-brand-green" />,
-      features: ["Arquitecturas Cloud-Native", "Microservicios", "Escalabilidad Horizontal"]
+      features: ["Arquitecturas en la nube", "Microservicios", "Escalabilidad Horizontal"]
     },
     {
       title: "Diseño de Arquitectura",
       description: "Estructuras de software robustas y resilientes diseñadas para el crecimiento sostenible de su negocio.",
       icon: <Layers className="w-6 h-6 text-brand-green" />,
-      features: ["System Design", "Scalability Roadmap", "Resilience Patterns"]
+      features: ["Diseño de sistemas", "Plan de escalabilidad", "Patrones de resiliencia"]
     },
     {
       title: "Modernización de Sistemas",
       description: "Transformamos infraestructuras legacy en ecosistemas modernos, eficientes y mantenibles.",
       icon: <BarChart3 className="w-6 h-6 text-brand-green" />,
-      features: ["Legacy Refactoring", "Cloud Migration", "Tech Debt Reduction"]
+      features: ["Refactorización de sistemas legacy", "Migración a la nube", "Reducción de deuda técnica"]
     }
   ];
 
@@ -110,8 +110,8 @@ const Home = () => {
             </div>
             <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { label: "Rendimiento", desc: "Latencia mínima en cada proceso." },
-                { label: "Escalabilidad", desc: "Preparado para el crecimiento masivo." },
+                { label: "Rendimiento", desc: "Tiempos de respuesta optimizados." },
+                { label: "Escalabilidad", desc: "Preparado para crecer." },
                 { label: "Mantenibilidad", desc: "Código limpio y documentado." },
                 { label: "Resiliencia", desc: "Sistemas tolerantes a fallos." }
               ].map((item, i) => (
@@ -131,15 +131,15 @@ const Home = () => {
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-6 font-display tracking-tight">Nuestro Proceso de Ingeniería</h2>
-            <p className="text-xl text-slate-400 font-light">Metodología rigurosa diseñada para garantizar la entrega de software de alta calidad en tiempos competitivos.</p>
+            <p className="text-xl text-slate-400 font-light">Un proceso claro, desde el análisis inicial hasta la puesta en producción.</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: "01", title: "Descubrimiento", desc: "Análisis profundo de sus necesidades de negocio y objetivos tecnológicos." },
-              { step: "02", title: "Arquitectura", desc: "Diseño de soluciones escalables bajo estándares internacionales de ingeniería." },
+              { step: "02", title: "Arquitectura", desc: "Diseño de soluciones escalables siguiendo buenas prácticas de ingeniería de software." },
               { step: "03", title: "Desarrollo Ágil", desc: "Ciclos de iteración rápida con entregas continuas y feedback constante." },
-              { step: "04", title: "Despliegue & QA", desc: "Pruebas exhaustivas y lanzamiento optimizado en entornos de producción." }
+              { step: "04", title: "Despliegue & QA", desc: "Pruebas antes de cada entrega y puesta en producción controlada." }
             ].map((item, i) => (
               <div key={i} className="relative p-8 glass rounded-3xl group hover:border-brand-green/30 transition-all duration-500">
                 <span className="text-5xl font-black text-brand-green/20 group-hover:text-brand-green/40 transition-colors mb-6 block font-display">{item.step}</span>
@@ -157,10 +157,10 @@ const Home = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
             <div className="max-w-2xl">
               <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-6 font-display tracking-tight">Capacidades Estratégicas</h2>
-              <p className="text-xl text-slate-400 font-light leading-relaxed">Ofrecemos un enfoque holístico para resolver desafíos tecnológicos complejos mediante metodologías ágiles y tecnología de punta.</p>
+              <p className="text-xl text-slate-400 font-light leading-relaxed">Servicios de ingeniería de software para construir, escalar y modernizar sus sistemas.</p>
             </div>
             <Link to="/servicios" className="text-brand-green font-bold flex items-center gap-2 group">
-              Ver Catálogo Completo <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              Ver todos los servicios <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>
           </div>
 
@@ -199,8 +199,8 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { 
-                title: "Empresas Enterprise", 
-                desc: "Diseñamos sistemas robustos y escalables capaces de soportar operaciones críticas a nivel global.",
+                title: "Empresas", 
+                desc: "Desarrollamos sistemas robustos que acompañan las operaciones y el crecimiento de su empresa.",
                 icon: <Building2 className="w-8 h-8 text-brand-green" />
               },
               { 
@@ -210,7 +210,7 @@ const Home = () => {
               },
               { 
                 title: "Equipos Técnicos", 
-                desc: "Acompañamos a departamentos de IT en la modernización de su arquitectura y adopción de mejores prácticas.",
+                desc: "Acompañamos a equipos de TI en la modernización de su arquitectura y la adopción de buenas prácticas.",
                 icon: <Users className="w-8 h-8 text-brand-green" />
               }
             ].map((item, i) => (
@@ -233,7 +233,7 @@ const Home = () => {
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-2/5 p-12 lg:p-20 bg-brand-green text-brand-950">
                 <h2 className="text-4xl font-extrabold mb-8 font-display leading-tight">Iniciemos una <br />Conversación</h2>
-                <p className="text-lg mb-12 font-medium opacity-80">Estamos listos para analizar sus desafíos tecnológicos y proponer soluciones de alto impacto.</p>
+                <p className="text-lg mb-12 font-medium opacity-80">Estamos listos para analizar sus desafíos tecnológicos y proponer soluciones a su medida.</p>
                 <a 
                   href={buildWhatsAppUrl()}
                   target="_blank"
@@ -246,9 +246,9 @@ const Home = () => {
               <div className="lg:w-3/5 p-12 lg:p-20 flex items-center justify-center text-center">
                 <div className="max-w-md">
                   <h3 className="text-3xl font-bold text-white mb-6 font-display">¿Listo para escalar?</h3>
-                  <p className="text-slate-400 font-light mb-10 leading-relaxed">Únase a las empresas que ya están transformando sus industrias con nuestra ingeniería de software.</p>
+                  <p className="text-slate-400 font-light mb-10 leading-relaxed">Conozca cómo trabajamos y qué principios guían cada proyecto.</p>
                   <Link to="/sobre-nosotros" className="text-brand-green font-bold flex items-center justify-center gap-2 group">
-                    Conoce más sobre nosotros <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    Conozca más sobre nosotros <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                   </Link>
                 </div>
               </div>

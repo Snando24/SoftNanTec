@@ -31,7 +31,7 @@ const Footer = () => {
               <Link to="/servicios" className="text-sm text-slate-400 hover:text-brand-green transition-colors">Servicios</Link>
               <Link to="/proyectos" className="text-sm text-slate-400 hover:text-brand-green transition-colors">Proyectos</Link>
               <Link to="/sobre-nosotros" className="text-sm text-slate-400 hover:text-brand-green transition-colors">Sobre Nosotros</Link>
-              <Link to="/contacto" className="text-sm text-slate-400 hover:text-brand-green transition-colors">Contáctanos</Link>
+              <Link to="/contacto" className="text-sm text-slate-400 hover:text-brand-green transition-colors">Contáctenos</Link>
             </div>
             <div className="flex flex-col gap-4">
               <span className="text-xs font-bold uppercase tracking-widest text-white">Social</span>

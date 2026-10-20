@@ -56,7 +56,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/contacto" className="bg-brand-green text-brand-950 px-6 py-2.5 rounded-full text-sm font-bold hover:bg-white transition-all duration-300 shadow-lg">
-            Contáctanos
+            Contáctenos
           </Link>
         </div>
 
@@ -86,7 +86,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/contacto" className="block bg-brand-green text-brand-950 px-5 py-4 rounded-xl text-center font-bold uppercase">
-            Contáctanos
+            Contáctenos
           </Link>
         </div>
       )}

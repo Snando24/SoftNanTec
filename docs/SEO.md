@@ -39,7 +39,7 @@ Cada página define `title`, `description`, canonical, `og:*` y `twitter:*` con 
 
 ## 6. Datos estructurados
 
-No existen. Si se añaden (`Organization`, `WebSite`, `Service`), usar solo datos reales y confirmados. No crear ratings ni reviews.
+`Organization` en `public/index.html` (nombre, URL, logo, correo, teléfono, ciudad y redes), solo con datos confirmados. No crear ratings ni reviews.
 
 ## 7. Imágenes
 
@@ -58,7 +58,10 @@ Ver `PERFORMANCE.md`.
 
 ## 10. Medición
 
-Search Console `[POR DEFINIR]`.
+- Indexación (verificado 2026-10-19 con `site:softnantec.com`): Google tiene indexadas `/`, `/servicios`, `/proyectos` y `/sobre-nosotros`, todavía con la descripción global anterior; se actualizará al recrawlear.
+- Search Console: el responsable indica que ya está configurado. No hay token visible en el sitio (sin meta `google-site-verification`, sin archivo HTML ni registro TXT en el dominio), por lo que la verificación no se pudo confirmar desde fuera. Pendiente: confirmar en Search Console que la propiedad sigue verificada, enviar `https://softnantec.com/sitemap.xml` y solicitar indexación de `/contacto` y `/privacidad`.
+- Favicon en resultados de Google: mostraba el logo de React (íconos de la plantilla CRA ya rastreados). Desde 2026-10-19 se declaran `favicon.ico` (16/32/48), `favicon-48.png` y `logo192.png` con el emblema; Google lo actualiza al volver a rastrear la portada (puede tardar días o semanas; acelerar con "Solicitar indexación" de `https://softnantec.com/` en Search Console).
+- Google Business Profile: no aparece en los resultados locales de "SoftNanTec Huancayo" (2026-10-19) `[POR CONFIRMAR]`.
 
 ## 11. Checklist
 
@@ -68,6 +71,6 @@ Search Console `[POR DEFINIR]`.
 - [x] Titles únicos (por ruta).
 - [x] Descriptions relevantes (por ruta).
 - [x] Headings coherentes (un H1 por página).
-- [x] Structured data verídica (no existe).
+- [x] Structured data verídica (`Organization`).
 - [x] Sin contenido duplicado importante.
 - [x] Imagen Open Graph existente.

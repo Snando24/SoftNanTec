@@ -14,7 +14,7 @@ Registrar procedencia y permisos de uso de recursos de terceros y propios.
 | `public/images/projects/tractotec.jpg` | Imagen principal (hero, `Fondo_Logo_Hero.png`) del sitio tractotec.com, diseñado por SoftNanTec; recortada a 960×540 | Contiene la marca de TractoTec Servicios Generales | Referencia de portafolio | Sí, como trabajo propio; la marca pertenece al cliente | Recomendable autorización escrita del cliente para usar su marca |
 | `photo-1498050108023-c5249f4df085` (TechInsights, desactivado) | Unsplash (hotlink) | [POR VERIFICAR] | Licencia Unsplash | Sí | LICENCIA POR VERIFICAR |
 | `assets/brand/Logo_Madre.png` | Logo maestro propio `[POR CONFIRMAR autoría/origen]` | SoftNanTec | Propietario | Sí | Pendiente |
-| `public/favicon.ico`, `logo96.png`, `logo192.png`, `logo512.png`, `og-image.jpg` | Derivados de `Logo_Madre.png` (2026-10-19) | SoftNanTec | Propietario | Sí | Igual que el maestro |
+| `assets/brand/Emblema.png`, `public/favicon.ico`, `favicon-48.png`, `logo96.png`, `logo192.png`, `logo512.png`, `og-image.jpg` | Derivados de `Logo_Madre.png` (2026-10-19; íconos cuadrados usan solo el emblema, sin texto) | SoftNanTec | Propietario | Sí | Igual que el maestro |
 
 ## 3. Iconos
 

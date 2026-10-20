@@ -1,4 +1,4 @@
-import { Users, CheckCircle2, ArrowUpRight } from 'lucide-react';
+import { MessagesSquare, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import usePageMeta from '../hooks/usePageMeta';
 
@@ -19,7 +19,7 @@ const About = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
             </span>
-            Ingeniería de Clase Mundial
+            Ingeniería de Software
           </div>
           <h1 className="text-5xl lg:text-[5.5rem] font-extrabold text-white mb-8 leading-[1.05] font-display tracking-tight">
             Nuestra <span className="neon-text-gradient">Filosofía</span> es la Ingeniería de Alto Rendimiento
@@ -37,7 +37,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent"></div>
             </div>
             <div className="absolute -bottom-10 -right-10 glass p-8 rounded-3xl hidden sm:block max-w-[320px] shadow-2xl border border-white/10">
-              <p className="text-brand-green font-bold mb-2 uppercase text-[10px] tracking-widest italic">Engineering Lab</p>
+              <p className="text-brand-green font-bold mb-2 uppercase text-[10px] tracking-widest italic">SoftNanTec Insights</p>
               <p className="text-white text-lg font-bold leading-snug">"No solo desarrollamos software — mostramos cómo lo hacemos."</p>
             </div>
           </div>
@@ -54,11 +54,11 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div className="flex flex-col gap-4 p-8 glass rounded-3xl border border-white/5 hover:border-brand-green/30 transition-colors">
                 <div className="w-12 h-12 rounded-xl bg-brand-green/10 text-brand-green flex items-center justify-center shrink-0 border border-brand-green/20">
-                  <Users size={24} />
+                  <MessagesSquare size={24} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg mb-2 text-white font-display">Talento Senior</h4>
-                  <p className="text-sm text-slate-400 font-light leading-relaxed">Equipos compuestos por expertos en arquitectura y sistemas distribuidos.</p>
+                  <h4 className="font-bold text-lg mb-2 text-white font-display">Comunicación Directa</h4>
+                  <p className="text-sm text-slate-400 font-light leading-relaxed">Hablará directamente con quienes diseñan y desarrollan su solución, sin intermediarios.</p>
                 </div>
               </div>
               <div className="flex flex-col gap-4 p-8 glass rounded-3xl border border-white/5 hover:border-brand-green/30 transition-colors">
@@ -87,10 +87,10 @@ const About = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Rendimiento", desc: "Optimizamos cada proceso para garantizar una latencia mínima y una eficiencia máxima en entornos de alta demanda." },
-              { title: "Escalabilidad", desc: "Diseñamos arquitecturas preparadas para el crecimiento masivo desde el primer día, evitando cuellos de botella." },
+              { title: "Rendimiento", desc: "Cuidamos los tiempos de respuesta y el uso eficiente de recursos desde el diseño." },
+              { title: "Escalabilidad", desc: "Diseñamos arquitecturas que pueden crecer junto con su negocio, evitando cuellos de botella." },
               { title: "Mantenibilidad", desc: "Escribimos código limpio, documentado y modular que facilita la evolución continua del sistema." },
-              { title: "Resiliencia", desc: "Construimos sistemas tolerantes a fallos con patrones de recuperación automática y alta disponibilidad." }
+              { title: "Resiliencia", desc: "Aplicamos buenas prácticas para que los sistemas toleren fallos y se recuperen con rapidez." }
             ].map((value, i) => (
               <div key={i} className="p-8 rounded-3xl bg-brand-950/40 border border-white/5 hover:border-brand-green/20 transition-all group">
                 <div className="w-12 h-12 bg-brand-green/5 rounded-2xl flex items-center justify-center mb-6 border border-brand-green/10 group-hover:bg-brand-green/10 transition-colors">
@@ -116,7 +116,7 @@ const About = () => {
               },
               { 
                 title: "Transparencia Técnica", 
-                desc: "Compartimos nuestros procesos y decisiones de ingeniería a través de nuestro Engineering Lab (SoftNanTec Insights)." 
+                desc: "Compartimos nuestros procesos y decisiones de ingeniería en SoftNanTec Insights, nuestro canal de contenido técnico." 
               },
               { 
                 title: "Ejecución Eficiente", 
@@ -133,10 +133,10 @@ const About = () => {
 
         {/* Call to Action */}
         <div className="text-center py-20">
-          <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-10 font-display">¿Listo para unirse a <br />nuestra red?</h2>
+          <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-10 font-display">¿Tiene un proyecto <br />en mente?</h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link to="/contacto" className="w-full sm:w-auto bg-brand-green text-brand-950 px-10 py-5 rounded-full font-bold text-lg hover:shadow-[0_0_40px_rgba(163,230,53,0.3)] transition-all flex items-center justify-center gap-3">
-              Hablar con un Experto <ArrowUpRight size={20} />
+              Conversemos sobre su proyecto <ArrowUpRight size={20} />
             </Link>
           </div>
         </div>

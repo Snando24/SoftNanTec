@@ -63,7 +63,7 @@ SoftNanTec/
 │   ├── audits/              Informes de auditoría
 │   └── legal/               Borradores de textos legales públicos
 ├── assets/brand/            Logo maestro (Logo_Madre.png), fuente de los íconos; no se publica
-├── public/                  index.html, favicon.ico, logo96/192/512.png, og-image.jpg, images/projects/, manifest, robots.txt
+├── public/                  index.html, favicon.ico, favicon-48.png, logo96/192/512.png, og-image.jpg, images/projects/, sitemap.xml, manifest, robots.txt
 ├── src/
 │   ├── App.js               Rutas y layout global
 │   ├── index.js             Punto de entrada

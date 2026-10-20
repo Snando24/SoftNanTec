@@ -6,7 +6,7 @@
 
 **Nombre:** SoftNanTec — sitio web corporativo
 **Descripción breve:** Sitio web informativo (SPA en React) que presenta los servicios de ingeniería de software de SoftNanTec y canaliza contactos hacia WhatsApp.
-**Estado:** Producción en https://softnantec.com/ (Vercel). La versión publicada al 2026-10-19 es anterior a la reestructuración; ver `DEPLOYMENT.md`.
+**Estado:** Producción en https://softnantec.com/ (Vercel). Versión reestructurada publicada el 2026-10-19; ver `DEPLOYMENT.md`.
 
 ## 2. Objetivo
 
@@ -93,7 +93,6 @@ Detalle en `ARCHITECTURE.md`.
 ### Media
 
 - Probar con lector de pantalla y zoom 200 % (accesibilidad y SEO por ruta ya corregidos).
-- Desplegar en Vercel la versión reestructurada y verificar con la lista de `DEPLOYMENT.md`.
 
 ### Baja
 

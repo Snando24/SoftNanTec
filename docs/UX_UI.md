@@ -24,7 +24,7 @@ Definido en `tailwind.config.js` y `src/styles/index.css`:
 - Bordes: radios grandes (`rounded-2xl` a `rounded-[3rem]`).
 - Iconografía: lucide-react.
 
-- Logo: maestro en `assets/brand/Logo_Madre.png`; derivados en `public/` (`logo96.png` para Navbar/Footer, `logo192/512.png`, `favicon.ico`, `og-image.jpg`).
+- Logo: maestro en `assets/brand/Logo_Madre.png` (con texto) y `assets/brand/Emblema.png` (solo el emblema). Navbar/Footer y `og-image.jpg` usan el logo completo; `favicon.ico`, `favicon-48.png` y `logo192/512.png` usan el emblema para que sea legible en tamaños pequeños.
 
 ## 4. Componentes
 
@@ -60,6 +60,7 @@ Mantener los tokens anteriores; no introducir colores nuevos sin necesidad.
 
 ## 10. Contenido
 
-- Mezcla de "tú" (Navbar, TechInsights) y "usted" (Contacto, Inicio) `[POR DEFINIR tono]`.
-- Mezcla de español e inglés en etiquetas de servicios ("System Design", "Legacy Refactoring").
+- Tono: se trata al visitante de **usted** en todo el sitio ("Contáctenos", "su proyecto"). Mantenerlo en textos nuevos.
+- Idioma: etiquetas en español; solo se conservan términos técnicos habituales (API, backend, legacy, CI/CD, GraphQL).
+- Contenido honesto (2026-10-19): sin afirmaciones de tamaño de equipo, alcance global ni tecnologías no confirmadas; publicar solo cifras y proyectos con evidencia.
 - Afirmaciones absolutas reformuladas (2026-10-19): "Nuestro objetivo es responder en menos de 24 horas" y "escalar a medida que su negocio crece".

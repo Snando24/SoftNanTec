@@ -21,14 +21,14 @@ const Services = () => {
     {
       title: "Desarrollo de APIs & Backend",
       id: "api-backend",
-      description: "Sistemas críticos diseñados para la escalabilidad global.",
-      longDescription: "Construimos el motor de su negocio con arquitecturas de alto rendimiento (Go, Node.js, Rust) capaces de procesar volúmenes masivos de datos con latencia mínima.",
+      description: "Backends y APIs diseñados para crecer.",
+      longDescription: "Construimos el núcleo técnico de su negocio: APIs y servicios backend bien diseñados, seguros y preparados para crecer.",
       icon: <Code2 size={32} className="text-brand-green" />,
       features: [
         "Arquitecturas de Microservicios",
-        "APIs RESTful & GraphQL de alta disponibilidad",
+        "APIs REST y GraphQL",
         "Integración de sistemas complejos",
-        "Optimización de bases de datos masivas"
+        "Diseño y optimización de bases de datos"
       ]
     },
     {
@@ -38,21 +38,21 @@ const Services = () => {
       longDescription: "Diseñamos el plano técnico de su éxito. Creamos infraestructuras de software que no solo resuelven los problemas de hoy, sino que están preparadas para escalar a medida que su negocio crece.",
       icon: <Layers size={32} className="text-brand-green" />,
       features: [
-        "System Design & Scalability Planning",
+        "Diseño de sistemas y planificación de escalabilidad",
         "Patrones de Resiliencia y Tolerancia a Fallos",
-        "Estrategias de Cloud-Native Architecture",
+        "Estrategias de arquitectura en la nube",
         "Auditoría y Optimización de Arquitectura"
       ]
     },
     {
-      title: "Consultoría Técnica Senior",
+      title: "Consultoría Técnica",
       id: "consulting",
-      description: "Resolución de desafíos técnicos de alta complejidad.",
-      longDescription: "Actuamos como su brazo de ingeniería extendido. Acompañamos a su equipo en la toma de decisiones críticas y en la resolución de cuellos de botella técnicos extremos.",
+      description: "Acompañamiento en decisiones y desafíos técnicos.",
+      longDescription: "Acompañamos a su equipo en la toma de decisiones técnicas y en la resolución de cuellos de botella.",
       icon: <BarChart3 size={32} className="text-brand-green" />,
       features: [
-        "Tech Stack Advisory",
-        "Optimización de Performance Crítica",
+        "Asesoría en la elección de tecnologías",
+        "Optimización de rendimiento",
         "Mentoría y Mejores Prácticas de Ingeniería",
         "Evaluación de Factibilidad Tecnológica"
       ]
@@ -61,13 +61,13 @@ const Services = () => {
       title: "Modernización de Sistemas",
       id: "modernization",
       description: "Transformación digital de plataformas legacy.",
-      longDescription: "Llevamos sus sistemas antiguos al futuro. Refactorizamos y migramos infraestructuras monolíticas hacia ecosistemas modernos, eficientes y fáciles de mantener.",
+      longDescription: "Modernizamos sus sistemas existentes. Refactorizamos y migramos infraestructuras monolíticas hacia ecosistemas modernos, eficientes y fáciles de mantener.",
       icon: <Cloud size={32} className="text-brand-green" />,
       features: [
         "Refactorización de Código Monolítico",
         "Migración Segura a la Nube",
         "Reducción de Deuda Técnica",
-        "Implementación de CI/CD Moderno"
+        "Integración y despliegue continuos (CI/CD)"
       ]
     }
   ];
@@ -80,7 +80,7 @@ const Services = () => {
             Nuestras <span className="neon-text-gradient">Capacidades</span>
           </h1>
           <p className="text-xl text-slate-400 font-light leading-relaxed">
-            Ofrecemos un abanico completo de soluciones tecnológicas diseñadas para resolver los desafíos más complejos de las empresas modernas.
+            Servicios de ingeniería de software para diseñar, construir y modernizar los sistemas de su negocio.
           </p>
         </div>
 
