@@ -2,19 +2,20 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react';
 import { CONTACT, buildWhatsAppUrl } from '../config/site';
+import { SERVICES } from '../config/services';
 import usePageMeta from '../hooks/usePageMeta';
 
 const Contact = () => {
   usePageMeta({
     title: "Contacto | SoftNanTec",
-    description: "¿Necesita diseñar o escalar una solución tecnológica? Contacte a SoftNanTec por WhatsApp o correo para un análisis inicial.",
+    description: "Cuéntenos qué tarea de su negocio quiere automatizar u ordenar. Contacte a SoftNanTec por WhatsApp o correo y reciba una propuesta a su medida.",
     path: "/contacto",
   });
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: 'Desarrollo de APIs & Backend',
+    service: SERVICES[0].title,
     message: ''
   });
 
@@ -29,7 +30,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    const text = `*Solicitud de Consultoría Técnica | SoftNanTec*\n\n` +
+    const text = `*Solicitud de proyecto | SoftNanTec*\n\n` +
                  `*Información del Cliente:*\n` +
                  `• *Nombre:* ${formData.name}\n` +
                  `• *Email:* ${formData.email}\n\n` +
@@ -43,21 +44,21 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-32 pb-20 bg-brand-950 min-h-screen">
+    <div className="pt-36 pb-24 bg-brand-950 min-h-screen">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-4xl mb-24">
+        <div className="max-w-4xl mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white text-xs font-semibold uppercase tracking-widest mb-8">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
             </span>
-            Consultoría Técnica Especializada
+            Respuesta directa del equipo de desarrollo
           </div>
-          <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 font-display tracking-tight leading-tight">
-            Diseñemos su <span className="neon-text-gradient">Arquitectura</span> del Mañana
+          <h1 className="text-4xl lg:text-6xl font-extrabold text-white mb-8 font-display tracking-tight leading-tight">
+            Cuéntenos qué quiere <span className="neon-text-gradient">automatizar</span>
           </h1>
-          <p className="text-xl text-slate-400 font-light leading-relaxed max-w-2xl">
-            ¿Necesita diseñar o escalar una solución tecnológica? Nuestro equipo está listo para analizar sus desafíos de ingeniería y proponer soluciones robustas.
+          <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
+            Descríbanos cómo trabaja hoy: qué documentos llena, qué controla en hojas de cálculo o qué le quita más tiempo. Con eso le preparamos una propuesta concreta.
           </p>
         </div>
 
@@ -98,9 +99,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="p-10 glass rounded-[2rem] border border-white/5 shadow-2xl">
+            <div className="p-10 glass rounded-3xl border border-white/5 shadow-2xl">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center text-blue-400 animate-pulse">
+                <div className="w-12 h-12 bg-brand-green/10 rounded-full flex items-center justify-center text-brand-green">
                   <MessageCircle size={24} />
                 </div>
                 <div>
@@ -109,14 +110,14 @@ const Contact = () => {
                 </div>
               </div>
               <p className="text-slate-400 font-light italic leading-relaxed">
-                "Revisaremos su solicitud y prepararemos un análisis inicial antes de nuestra primera reunión."
+                "Si tiene ejemplos (una proforma, un Excel, un formato), envíelos por WhatsApp: nos ayudan a entender su caso más rápido."
               </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="p-10 lg:p-16 glass rounded-[3rem] border border-white/5 shadow-2xl">
-            <h3 className="text-2xl font-bold text-white mb-10 font-display">Solicitar Análisis Inicial</h3>
+          <div className="p-10 lg:p-16 glass rounded-3xl border border-white/5 shadow-2xl">
+            <h3 className="text-2xl font-bold text-white mb-10 font-display">Solicitar una propuesta</h3>
             <form className="space-y-8" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
@@ -159,10 +160,10 @@ const Contact = () => {
                   onChange={handleChange}
                   className="w-full bg-transparent border-b border-white/10 py-4 text-white focus:border-brand-green transition-all"
                 >
-                  <option className="bg-brand-950">Desarrollo de APIs & Backend</option>
-                  <option className="bg-brand-950">Diseño de Arquitectura</option>
-                  <option className="bg-brand-950">Consultoría Técnica</option>
-                  <option className="bg-brand-950">Modernización de Sistemas</option>
+                  {SERVICES.map((s) => (
+                    <option key={s.id} className="bg-brand-950">{s.title}</option>
+                  ))}
+                  <option className="bg-brand-950">Otro / no estoy seguro</option>
                 </select>
               </div>
               <div className="space-y-2">

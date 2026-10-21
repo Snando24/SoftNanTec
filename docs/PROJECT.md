@@ -1,22 +1,22 @@
 # PROJECT.md
 
-> Última revisión: 2026-10-19. Fuente: código del repositorio. Lo no confirmado se marca `[POR DEFINIR]`.
+> Última revisión: 2026-10-21. Fuente: código del repositorio. Lo no confirmado se marca `[POR DEFINIR]`.
 
 ## 1. Identificación
 
 **Nombre:** SoftNanTec — sitio web corporativo
-**Descripción breve:** Sitio web informativo (SPA en React) que presenta los servicios de ingeniería de software de SoftNanTec y canaliza contactos hacia WhatsApp.
+**Descripción breve:** Sitio web informativo (SPA en React) que presenta a SoftNanTec como estudio de software a medida para negocios y profesionales, muestra su portafolio real y canaliza contactos hacia WhatsApp.
 **Estado:** Producción en https://softnantec.com/ (Vercel). Versión reestructurada publicada el 2026-10-19; ver `DEPLOYMENT.md`.
 
 ## 2. Objetivo
 
 ### Objetivo principal
 
-Presentar la propuesta de valor y los servicios de SoftNanTec y generar solicitudes de contacto (formulario → WhatsApp, botón flotante de WhatsApp, correo).
+Presentar la propuesta de valor (software a medida que resuelve el trabajo diario: automatización de documentos, sistemas de gestión, web, apps) respaldada por proyectos reales, y generar solicitudes de contacto (formulario → WhatsApp, botón flotante de WhatsApp, correo).
 
 ### Objetivos secundarios
 
-- Mostrar proyectos realizados (página `/proyectos`).
+- Mostrar proyectos realizados (página `/proyectos`, 6 proyectos con problema, solución y estado).
 - Difundir contenido técnico mediante "SoftNanTec Insights" (componente listo pero desactivado hasta que exista el canal de YouTube).
 
 ## 3. Problema que resuelve
@@ -49,7 +49,7 @@ Según el contenido del sitio (sección "¿A quién ayudamos?"):
 
 | Funcionalidad | Descripción | Prioridad | Estado |
 |---|---|---|---|
-| Páginas informativas | Inicio, Servicios, Sobre Nosotros, Proyectos (portafolio: TractoTec) | Alta | Hecho |
+| Páginas informativas | Inicio, Servicios, Sobre Nosotros, Proyectos (portafolio de 6 proyectos, filtrable) | Alta | Hecho |
 | Formulario de contacto | Compone mensaje y abre `wa.me` | Alta | Hecho |
 | Widget WhatsApp | Botón flotante en todas las páginas | Media | Hecho |
 | SoftNanTec Insights | Sección de contenido técnico (YouTube) | Baja | Desactivado |
@@ -87,7 +87,7 @@ Detalle en `ARCHITECTURE.md`.
 
 ### Alta
 
-- Subir los proyectos adicionales con evidencia (portafolio actual: TractoTec).
+- Añadir capturas reales de los sistemas (hoy se muestran ilustraciones abstractas, salvo TractoTec).
 - Completar la política de privacidad provisional al obtener el RUC.
 
 ### Media
@@ -128,7 +128,7 @@ Las mejoras a futuro se gestionan en [`BACKLOG.md`](BACKLOG.md).
 
 - [x] Hosting y dominio de producción: Vercel, https://softnantec.com/.
 - [x] Cifras de Inicio y proyectos sin evidencia: retirados el 2026-10-19.
-- [ ] Proyectos adicionales a publicar en `/proyectos`.
+- [x] Proyectos adicionales a publicar en `/proyectos` (2026-10-21).
 - [ ] Datos legales de la empresa (razón social, RUC, domicilio) — en trámite; al obtenerlos, completar `COMPANY` en `src/config/site.js` (ver `docs/legal/PRIVACY_POLICY.md`).
 - [ ] Si se incorporará analítica.
 

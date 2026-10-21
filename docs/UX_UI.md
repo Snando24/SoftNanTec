@@ -1,10 +1,10 @@
 # UX_UI.md
 
-> Última revisión: 2026-10-19. Describe el sistema visual existente.
+> Última revisión: 2026-10-21. Describe el sistema visual existente.
 
 ## 1. Principios
 
-[POR DEFINIR] — estética actual: oscura, minimalista, con acentos neón lima/cian y superficies "glass".
+Estética oscura con acento lima del logo. Evolución 2026-10-21: menos efectos y radios gigantes (`rounded-2xl`/`rounded-3xl`), texto más legible (sin `font-light` en párrafos), fondo de cuadrícula sutil (`.bg-grid`), contenido orientado a casos reales (antes/ahora, problema → solución, estado del proyecto).
 
 ## 2. Navegación
 
@@ -35,6 +35,10 @@ Definido en `tailwind.config.js` y `src/styles/index.css`:
 | Botón de envío | Bloque blanco | default/hover/focus | Sí |
 | WhatsAppWidget | Botón flotante | default/hover + tooltip | Sí |
 | Menú móvil | Toggle | abierto/cerrado | Sí (aria) |
+| ProjectCard | Tarjeta compacta de proyecto | default/hover/focus | Sí |
+| ProjectVisual | Ilustración abstracta por tipo (no es captura real) o imagen real si existe | — | Decorativa (`aria-hidden`) |
+| StatusBadge | En uso/En producción (lima), En desarrollo/implementación (cian), Laboratorio (gris) | — | Texto visible |
+| Filtro de proyectos | Botones píldora | `aria-pressed` | Sí |
 
 ## 5. Botones y enlaces
 

@@ -1,262 +1,264 @@
-import { 
-  ArrowUpRight, 
-  Code2, 
-  BarChart3, 
-  Layers, 
-  CheckCircle2,
-  Users,
-  Building2,
-  ChevronRight
-} from 'lucide-react';
+import { ArrowUpRight, ArrowRight, CheckCircle2, Monitor, Smartphone, Globe, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { buildWhatsAppUrl } from '../config/site';
+import { buildWhatsAppUrl, CONTACT } from '../config/site';
+import { SERVICES } from '../config/services';
+import { PROJECTS, FEATURED_PROJECT_IDS, getProject } from '../config/projects';
+import ServiceIcon from '../components/common/ServiceIcon';
+import ProjectCard from '../components/projects/ProjectCard';
+import ProjectVisual from '../components/projects/ProjectVisual';
 import usePageMeta from '../hooks/usePageMeta';
 // import TechInsights from '../components/sections/TechInsights'; // Activar cuando el canal de YT esté listo
 
+const BEFORE_AFTER = [
+  {
+    before: 'Proformas armadas a mano en Word, una por una.',
+    after: 'Formulario que genera la proforma en PDF o Word con su membrete.',
+    project: 'proformas-tractotec',
+  },
+  {
+    before: 'Inventario repartido en hojas de cálculo sin saber el stock real.',
+    after: 'Entradas, salidas, alertas de stock mínimo y reportes en un solo sistema.',
+    project: 'sisalmacen',
+  },
+  {
+    before: 'Horas redactando evaluaciones de cada estudiante.',
+    after: 'Borradores generados a partir de la observación, editables y listos en Word.',
+    project: 'evaluacion-inicial',
+  },
+  {
+    before: 'Un negocio que no aparece cuando lo buscan en internet.',
+    after: 'Sitio web con panel propio y cotizaciones que llegan por WhatsApp.',
+    project: 'tractotec-web',
+  },
+];
+
+const STEPS = [
+  { step: '01', title: 'Conversamos', desc: 'Nos cuenta cómo trabaja hoy y qué le quita tiempo. Revisamos sus documentos, hojas de cálculo y procesos reales.' },
+  { step: '02', title: 'Proponemos', desc: 'Le presentamos qué vamos a construir, en qué plataforma (PC, celular o web) y en qué etapas.' },
+  { step: '03', title: 'Construimos con entregas', desc: 'Le mostramos avances funcionando para que los pruebe y ajustemos sobre su uso real, no sobre supuestos.' },
+  { step: '04', title: 'Instalamos y acompañamos', desc: 'Instalamos el sistema, cargamos sus datos, capacitamos a su equipo y seguimos disponibles para mejoras.' },
+];
+
 const Home = () => {
   usePageMeta({
-    title: "SoftNanTec | Construimos Sistemas Escalables de Alto Rendimiento",
-    description: "SoftNanTec: Soluciones diseñadas para escalar, mantenerse resilientes y operar de forma eficiente en producción. Ingeniería de software de alto rendimiento.",
-    path: "/",
+    title: 'SoftNanTec | Software a medida para su negocio',
+    description:
+      'Desarrollamos sistemas, apps y páginas web a medida para negocios y profesionales: automatización de proformas y documentos, control de inventario, apps de escritorio y móviles. Huancayo, Perú.',
+    path: '/',
   });
 
-  const services = [
-    {
-      title: "Desarrollo de APIs & Backend",
-      description: "Soluciones de alto rendimiento con arquitecturas modernas preparadas para crecer con su negocio.",
-      icon: <Code2 className="w-6 h-6 text-brand-green" />,
-      features: ["Arquitecturas en la nube", "Microservicios", "Escalabilidad Horizontal"]
-    },
-    {
-      title: "Diseño de Arquitectura",
-      description: "Estructuras de software robustas y resilientes diseñadas para el crecimiento sostenible de su negocio.",
-      icon: <Layers className="w-6 h-6 text-brand-green" />,
-      features: ["Diseño de sistemas", "Plan de escalabilidad", "Patrones de resiliencia"]
-    },
-    {
-      title: "Modernización de Sistemas",
-      description: "Transformamos infraestructuras legacy en ecosistemas modernos, eficientes y mantenibles.",
-      icon: <BarChart3 className="w-6 h-6 text-brand-green" />,
-      features: ["Refactorización de sistemas legacy", "Migración a la nube", "Reducción de deuda técnica"]
-    }
-  ];
+  const featured = FEATURED_PROJECT_IDS.map(getProject).filter(Boolean);
+  const heroProjects = [getProject('proformas-tractotec'), getProject('sisalmacen')];
 
   return (
-    <div className="min-h-screen bg-brand-950 text-slate-300 font-sans selection:bg-brand-green/30">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-green/5 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/4"></div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[120px] translate-y-1/4 -translate-x-1/4"></div>
-        </div>
+    <div className="bg-brand-950 text-slate-300 font-sans selection:bg-brand-green/30">
+      {/* Hero */}
+      <section className="relative pt-36 pb-24 lg:pt-44 lg:pb-32 overflow-hidden">
+        <div className="absolute inset-0 -z-0 bg-grid [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
+        <div className="absolute top-0 right-0 w-[700px] h-[700px] bg-brand-green/5 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/4" />
 
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white text-xs font-semibold uppercase tracking-widest mb-8">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green"></span>
-              </span>
-              Ingeniería de Software • Arquitectura Escalable
-            </div>
-            
-            <h1 className="text-5xl lg:text-[5.5rem] font-extrabold text-white mb-8 leading-[1.05] font-display tracking-tight">
-              Construimos sistemas <span className="neon-text-gradient">escalables</span> de alto rendimiento.
-            </h1>
-            
-            <p className="text-xl lg:text-2xl text-slate-400 mb-12 leading-relaxed max-w-3xl font-light">
-              Soluciones diseñadas para escalar, mantenerse resilientes y operar de forma eficiente en producción.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center gap-6 mb-12">
-              <a 
-                href={buildWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-brand-green text-brand-950 px-10 py-5 rounded-full font-bold text-lg hover:shadow-[0_0_40px_rgba(163,230,53,0.3)] transition-all flex items-center justify-center gap-3"
-              >
-                Solicitar Consulta <ArrowUpRight size={20} />
-              </a>
-              <Link to="/servicios" className="w-full sm:w-auto px-10 py-5 rounded-full border border-white/20 text-white font-bold text-lg hover:bg-white/5 transition-all text-center">
-                Ver cómo trabajamos
-              </Link>
-            </div>
-
-            <div className="flex flex-wrap gap-x-10 gap-y-4">
-              {[
-                "Enfoque en producción real",
-                "Arquitecturas escalables desde el inicio",
-                "Ingeniería orientada a resultados"
-              ].map((benefit, i) => (
-                <div key={i} className="flex items-center gap-2 text-sm text-slate-400 font-medium">
-                  <CheckCircle2 size={16} className="text-brand-green" />
-                  {benefit}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Focus Section */}
-      <section className="py-24 bg-brand-900/10 relative">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green/10 border border-brand-green/20 text-brand-green text-[10px] font-bold uppercase tracking-widest mb-6">
-                Nuestro Enfoque
+        <div className="container mx-auto px-6 lg:px-12 relative">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-slate-300 text-xs font-semibold mb-8">
+                <MapPin size={14} className="text-brand-green" />
+                Software a medida · {CONTACT.location}
               </div>
-              <h2 className="text-3xl lg:text-5xl font-extrabold text-white font-display leading-tight">Principios de Ingeniería Real</h2>
-            </div>
-            <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { label: "Rendimiento", desc: "Tiempos de respuesta optimizados." },
-                { label: "Escalabilidad", desc: "Preparado para crecer." },
-                { label: "Mantenibilidad", desc: "Código limpio y documentado." },
-                { label: "Resiliencia", desc: "Sistemas tolerantes a fallos." }
-              ].map((item, i) => (
-                <div key={i} className="space-y-3">
-                  <div className="h-1 w-12 bg-brand-green/30"></div>
-                  <h4 className="text-white font-bold uppercase text-xs tracking-widest">{item.label}</h4>
-                  <p className="text-sm text-slate-400 font-light">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* How We Work Section */}
-      <section className="py-32 bg-brand-950 relative overflow-hidden">
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-6 font-display tracking-tight">Nuestro Proceso de Ingeniería</h2>
-            <p className="text-xl text-slate-400 font-light">Un proceso claro, desde el análisis inicial hasta la puesta en producción.</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Descubrimiento", desc: "Análisis profundo de sus necesidades de negocio y objetivos tecnológicos." },
-              { step: "02", title: "Arquitectura", desc: "Diseño de soluciones escalables siguiendo buenas prácticas de ingeniería de software." },
-              { step: "03", title: "Desarrollo Ágil", desc: "Ciclos de iteración rápida con entregas continuas y feedback constante." },
-              { step: "04", title: "Despliegue & QA", desc: "Pruebas antes de cada entrega y puesta en producción controlada." }
-            ].map((item, i) => (
-              <div key={i} className="relative p-8 glass rounded-3xl group hover:border-brand-green/30 transition-all duration-500">
-                <span className="text-5xl font-black text-brand-green/20 group-hover:text-brand-green/40 transition-colors mb-6 block font-display">{item.step}</span>
-                <h4 className="text-xl font-bold text-white mb-4">{item.title}</h4>
-                <p className="text-sm text-slate-400 leading-relaxed font-light">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <h1 className="text-4xl sm:text-5xl lg:text-[4.25rem] font-extrabold text-white mb-8 leading-[1.08] font-display tracking-tight">
+                Software a medida que resuelve el <span className="neon-text-gradient">trabajo diario</span> de su negocio.
+              </h1>
 
-      {/* Services Section */}
-      <section id="servicios" className="py-32 bg-brand-950">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-            <div className="max-w-2xl">
-              <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-6 font-display tracking-tight">Capacidades Estratégicas</h2>
-              <p className="text-xl text-slate-400 font-light leading-relaxed">Servicios de ingeniería de software para construir, escalar y modernizar sus sistemas.</p>
-            </div>
-            <Link to="/servicios" className="text-brand-green font-bold flex items-center gap-2 group">
-              Ver todos los servicios <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </Link>
-          </div>
+              <p className="text-lg lg:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl">
+                Desarrollamos sistemas, apps y páginas web para negocios y profesionales: desde la proforma que hoy hace a mano hasta el control de su almacén.
+              </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="group p-10 rounded-[2rem] bg-brand-900/40 border border-white/5 hover:border-brand-green/30 hover:bg-brand-900/60 transition-all duration-500">
-                <div className="mb-8 p-4 bg-brand-green/10 rounded-2xl w-fit group-hover:bg-brand-green transition-colors duration-500">
-                  <div className="group-hover:text-brand-950 transition-colors duration-500">
-                    {service.icon}
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4 font-display">{service.title}</h3>
-                <p className="text-slate-400 leading-relaxed mb-8 font-light">{service.description}</p>
-                <div className="space-y-3 pt-6 border-t border-white/5">
-                  {service.features.map(feature => (
-                    <div key={feature} className="flex items-center gap-3">
-                      <CheckCircle2 size={16} className="text-brand-green" />
-                      <span className="text-sm text-slate-300 font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Who We Help Section */}
-      <section className="py-32 bg-brand-900/10">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-6xl font-extrabold text-white mb-6 font-display tracking-tight">¿A Quién Ayudamos?</h2>
-            <p className="text-xl text-slate-400 font-light max-w-2xl mx-auto">Soluciones de ingeniería adaptadas a diferentes escalas y desafíos técnicos.</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { 
-                title: "Empresas", 
-                desc: "Desarrollamos sistemas robustos que acompañan las operaciones y el crecimiento de su empresa.",
-                icon: <Building2 className="w-8 h-8 text-brand-green" />
-              },
-              { 
-                title: "Startups en Crecimiento", 
-                desc: "Construimos una base técnica sólida que permite escalar el producto sin fricciones técnicas futuras.",
-                icon: <ArrowUpRight className="w-8 h-8 text-brand-green" />
-              },
-              { 
-                title: "Equipos Técnicos", 
-                desc: "Acompañamos a equipos de TI en la modernización de su arquitectura y la adopción de buenas prácticas.",
-                icon: <Users className="w-8 h-8 text-brand-green" />
-              }
-            ].map((item, i) => (
-              <div key={i} className="p-10 glass rounded-[2.5rem] border border-white/5 hover:border-brand-green/30 transition-all group">
-                <div className="mb-8 p-4 bg-brand-green/10 rounded-2xl w-fit group-hover:bg-brand-green group-hover:text-brand-950 transition-all">
-                  {item.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4 font-display">{item.title}</h3>
-                <p className="text-slate-400 leading-relaxed font-light">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-32 bg-brand-950">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-6xl mx-auto glass rounded-[3rem] overflow-hidden">
-            <div className="flex flex-col lg:flex-row">
-              <div className="lg:w-2/5 p-12 lg:p-20 bg-brand-green text-brand-950">
-                <h2 className="text-4xl font-extrabold mb-8 font-display leading-tight">Iniciemos una <br />Conversación</h2>
-                <p className="text-lg mb-12 font-medium opacity-80">Estamos listos para analizar sus desafíos tecnológicos y proponer soluciones a su medida.</p>
-                <a 
+              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+                <a
                   href={buildWhatsAppUrl()}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-950 text-white px-8 py-4 rounded-full font-bold inline-flex items-center gap-3 hover:bg-white hover:text-brand-950 transition-all"
+                  className="bg-brand-green text-brand-950 px-8 py-4 rounded-full font-bold text-base hover:shadow-[0_0_40px_rgba(163,230,53,0.3)] transition-all flex items-center justify-center gap-2"
                 >
-                  Contactar Ahora <ChevronRight size="20" />
+                  Cuéntenos su caso <ArrowUpRight size={18} />
                 </a>
+                <Link to="/proyectos" className="px-8 py-4 rounded-full border border-white/20 text-white font-bold text-base hover:bg-white/5 transition-all text-center">
+                  Ver proyectos realizados
+                </Link>
               </div>
-              <div className="lg:w-3/5 p-12 lg:p-20 flex items-center justify-center text-center">
-                <div className="max-w-md">
-                  <h3 className="text-3xl font-bold text-white mb-6 font-display">¿Listo para escalar?</h3>
-                  <p className="text-slate-400 font-light mb-10 leading-relaxed">Conozca cómo trabajamos y qué principios guían cada proyecto.</p>
-                  <Link to="/sobre-nosotros" className="text-brand-green font-bold flex items-center justify-center gap-2 group">
-                    Conozca más sobre nosotros <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                  </Link>
-                </div>
+
+              <div className="flex flex-wrap gap-x-8 gap-y-3">
+                {['Hablará directamente con quien desarrolla', 'Entregas que puede probar', 'Sus datos bajo su control'].map((b) => (
+                  <div key={b} className="flex items-center gap-2 text-sm text-slate-400">
+                    <CheckCircle2 size={16} className="text-brand-green" />
+                    {b}
+                  </div>
+                ))}
               </div>
+            </div>
+
+            <div className="lg:col-span-5 relative hidden lg:block h-[440px]">
+              <ProjectVisual project={heroProjects[0]} className="absolute top-0 right-0 w-[85%] h-64 shadow-2xl" />
+              <ProjectVisual project={heroProjects[1]} className="absolute bottom-0 left-0 w-[85%] h-64 shadow-2xl" />
             </div>
           </div>
         </div>
       </section>
-      {/* SoftNanTec Insights Section - Ready but deactivated (ver components/sections/TechInsights.js) */}
+
+      {/* Antes / después */}
+      <section className="py-24 border-t border-white/5">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-2xl mb-14">
+            <p className="text-brand-green text-xs font-bold uppercase tracking-widest mb-4">Problemas que ya resolvimos</p>
+            <h2 className="text-3xl lg:text-5xl font-extrabold text-white font-display tracking-tight leading-tight">
+              Del trabajo manual a un sistema que lo hace por usted
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {BEFORE_AFTER.map((item) => (
+              <Link
+                key={item.project}
+                to={`/proyectos#${item.project}`}
+                className="group grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] sm:items-center gap-4 p-6 rounded-2xl border border-white/5 bg-brand-900/30 hover:border-brand-green/30 transition-colors"
+              >
+                <div>
+                  <p className="text-[11px] uppercase tracking-widest text-slate-500 font-bold mb-2">Antes</p>
+                  <p className="text-sm text-slate-400 leading-relaxed">{item.before}</p>
+                </div>
+                <ArrowRight size={18} className="text-brand-green shrink-0 rotate-90 sm:rotate-0 sm:group-hover:translate-x-1 transition-transform" />
+                <div>
+                  <p className="text-[11px] uppercase tracking-widest text-brand-green font-bold mb-2">Ahora</p>
+                  <p className="text-sm text-white leading-relaxed">{item.after}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Servicios */}
+      <section className="py-24 bg-brand-900/20 border-y border-white/5">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+            <div className="max-w-2xl">
+              <p className="text-brand-green text-xs font-bold uppercase tracking-widest mb-4">Qué hacemos</p>
+              <h2 className="text-3xl lg:text-5xl font-extrabold text-white font-display tracking-tight">Soluciones para su forma de trabajar</h2>
+            </div>
+            <Link to="/servicios" className="text-brand-green font-bold flex items-center gap-2 group shrink-0">
+              Ver todos los servicios <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {SERVICES.map((s) => (
+              <Link
+                key={s.id}
+                to={`/servicios#${s.id}`}
+                className="group p-7 rounded-2xl bg-brand-950/60 border border-white/5 hover:border-brand-green/30 transition-colors"
+              >
+                <div className="mb-5 p-3 bg-brand-green/10 rounded-xl w-fit group-hover:bg-brand-green transition-colors">
+                  <ServiceIcon name={s.icon} size={22} className="text-brand-green group-hover:text-brand-950 transition-colors" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 font-display">{s.title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{s.short}</p>
+              </Link>
+            ))}
+            <div className="p-7 rounded-2xl border border-dashed border-white/10 flex flex-col justify-center">
+              <p className="text-white font-bold mb-2 font-display">¿Su caso no está aquí?</p>
+              <p className="text-sm text-slate-400 mb-4">Si una tarea se repite todos los días, probablemente se puede automatizar.</p>
+              <Link to="/contacto" className="text-brand-green text-sm font-bold inline-flex items-center gap-1.5">
+                Consúltenos <ArrowUpRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proyectos destacados */}
+      <section className="py-24">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+            <div className="max-w-2xl">
+              <p className="text-brand-green text-xs font-bold uppercase tracking-widest mb-4">Proyectos</p>
+              <h2 className="text-3xl lg:text-5xl font-extrabold text-white font-display tracking-tight">Sistemas que ya están trabajando</h2>
+            </div>
+            <Link to="/proyectos" className="text-brand-green font-bold flex items-center gap-2 group shrink-0">
+              Ver los {PROJECTS.length} proyectos <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {featured.map((p) => (
+              <ProjectCard key={p.id} project={p} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dónde funciona */}
+      <section className="py-20 border-y border-white/5 bg-brand-900/20">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-3 gap-10 items-center">
+            <h2 className="text-2xl lg:text-3xl font-extrabold text-white font-display leading-tight">
+              Su sistema, donde lo necesite
+            </h2>
+            <div className="lg:col-span-2 grid sm:grid-cols-3 gap-6">
+              {[
+                { Icon: Monitor, title: 'Escritorio Windows', desc: 'Instalador propio; puede funcionar sin internet.' },
+                { Icon: Smartphone, title: 'Celular', desc: 'App web instalable o APK para Android.' },
+                { Icon: Globe, title: 'Web', desc: 'Acceso desde cualquier lugar, con usuarios y permisos.' },
+              ].map(({ Icon, title, desc }) => (
+                <div key={title} className="flex gap-4">
+                  <Icon size={22} className="text-brand-green shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-white font-bold text-sm mb-1">{title}</p>
+                    <p className="text-sm text-slate-400 leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proceso */}
+      <section className="py-24">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-2xl mb-14">
+            <p className="text-brand-green text-xs font-bold uppercase tracking-widest mb-4">Cómo trabajamos</p>
+            <h2 className="text-3xl lg:text-5xl font-extrabold text-white font-display tracking-tight">De su problema a un sistema en uso</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {STEPS.map((item) => (
+              <div key={item.step} className="p-7 rounded-2xl glass">
+                <span className="text-3xl font-black text-brand-green/40 mb-4 block font-display">{item.step}</span>
+                <h3 className="text-lg font-bold text-white mb-3">{item.title}</h3>
+                <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="pb-28">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="rounded-3xl bg-brand-green text-brand-950 p-10 lg:p-16 flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+            <div className="max-w-2xl">
+              <h2 className="text-3xl lg:text-4xl font-extrabold font-display leading-tight mb-4">¿Qué tarea le gustaría dejar de hacer a mano?</h2>
+              <p className="text-base lg:text-lg font-medium opacity-80">Cuéntenos cómo trabaja hoy. Le respondemos con una propuesta concreta, sin compromiso.</p>
+            </div>
+            <a
+              href={buildWhatsAppUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-950 text-white px-8 py-4 rounded-full font-bold inline-flex items-center justify-center gap-2 hover:bg-white hover:text-brand-950 transition-all shrink-0"
+            >
+              Escribir por WhatsApp <ArrowUpRight size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
       {/* <TechInsights /> */}
     </div>
   );
