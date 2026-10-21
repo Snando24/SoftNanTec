@@ -1,5 +1,6 @@
 // Portafolio de SoftNanTec: fuente única de verdad para /proyectos, Inicio y Servicios.
-// Publicar solo proyectos con evidencia. No incluir nombres de personas sin su autorización.
+// Publicar solo proyectos con evidencia. Por ahora no se publican nombres de clientes (decisión 2026-10-21).
+// Las capturas usan datos de demostración; logos y membretes de clientes van difuminados.
 
 export const PROJECT_GROUPS = {
   client: 'Proyectos para clientes',
@@ -11,7 +12,7 @@ export const PROJECTS = [
     id: 'proformas-tractotec',
     group: 'client',
     title: 'Generador de Proformas',
-    client: 'TractoTec Servicios Generales',
+    client: 'Talleres de vehículos y maquinaria pesada',
     category: 'Automatización de documentos',
     status: 'En uso',
     summary:
@@ -19,16 +20,22 @@ export const PROJECTS = [
     problem:
       'Cada proforma del taller se armaba a mano en Word: copiar datos del cliente, recalcular montos y cuidar el formato una y otra vez.',
     solution:
-      'Una app donde se registra el cliente, RUC, ítems y adelanto, se ve la vista previa y se exporta la proforma con el membrete de la empresa en PDF o Word. Guarda el historial y tiene versiones para el área de taller y de pintura.',
+      'Una app donde se registra el cliente, RUC, ítems y adelanto, se ve la vista previa y se exporta la proforma con el membrete de la empresa en PDF o Word. Guarda el historial y se adaptó en tres versiones: taller general, área de pintura y una variante con formato corporativo para otro taller.',
     features: [
       'Exportación a PDF y Word con membrete',
       'Historial de proformas con filtros',
-      'Versiones para taller y pintura',
+      'Tres versiones adaptadas a cada taller',
       'Funciona en PC, navegador del celular y Android',
     ],
     platforms: ['Escritorio (.exe)', 'Web / PWA', 'Android (APK)'],
     tags: ['Python', 'ReportLab', 'python-docx', 'Capacitor'],
     visual: 'document',
+    image: '/images/projects/proformas-taller.jpg',
+    gallery: [
+      { src: '/images/projects/proformas-taller.jpg', caption: 'Versión taller: formulario y vista previa' },
+      { src: '/images/projects/proformas-pintura.jpg', caption: 'Versión pintura' },
+      { src: '/images/projects/proformas-v3.jpg', caption: 'Versión con formato corporativo' },
+    ],
   },
   {
     id: 'evaluacion-inicial',
@@ -52,6 +59,13 @@ export const PROJECTS = [
     platforms: ['Escritorio Windows (instalador)'],
     tags: ['TypeScript', 'Node.js', 'Electron', 'SQLite', 'Clean Architecture'],
     visual: 'education',
+    image: '/images/projects/evaluacion-matriz.jpg',
+    gallery: [
+      { src: '/images/projects/evaluacion-matriz.jpg', caption: 'Matriz de evaluación por criterio' },
+      { src: '/images/projects/evaluacion-actividades.jpg', caption: 'Panel de actividades (escala de estimación)' },
+      { src: '/images/projects/evaluacion-version-cuaderno.jpg', caption: 'Versión «Cuaderno de campo»' },
+      { src: '/images/projects/evaluacion-version-gestion.jpg', caption: 'Versión «Gestión de evaluación»' },
+    ],
   },
   {
     id: 'sisalmacen',
@@ -75,12 +89,17 @@ export const PROJECTS = [
     platforms: ['Escritorio Windows (instalador)'],
     tags: ['Python', 'PySide6 (Qt)', 'SQLAlchemy', 'SQLite', 'Pytest'],
     visual: 'inventory',
+    image: '/images/projects/sisalmacen-dashboard.jpg',
+    gallery: [
+      { src: '/images/projects/sisalmacen-dashboard.jpg', caption: 'Panel de control del almacén' },
+      { src: '/images/projects/sisalmacen-productos.jpg', caption: 'Productos con alertas de stock mínimo' },
+    ],
   },
   {
     id: 'tractotec-web',
     group: 'client',
     title: 'TractoTec — Sitio web',
-    client: 'TractoTec Servicios Generales',
+    client: 'Taller de maquinaria pesada (Huancayo)',
     category: 'Sitio web corporativo',
     status: 'En producción',
     summary:
@@ -123,6 +142,7 @@ export const PROJECTS = [
     platforms: ['Web'],
     tags: ['React', 'TypeScript', 'Vite', 'Supabase', 'PostgreSQL'],
     visual: 'store',
+    image: '/images/projects/storeos-inicio.jpg',
   },
   {
     id: 'jarvistec',

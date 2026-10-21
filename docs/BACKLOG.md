@@ -12,8 +12,8 @@
 | BL-004 | Tests de render por página (Jest + React Testing Library) | Detectar regresiones | Baja | Pendiente | AUD-023 |
 | BL-005 | CI/CD: build y lint automáticos en cada PR (p. ej. GitHub Actions) | Calidad antes de desplegar | Baja | Pendiente | AUD-025 |
 | BL-006 | Publicar más proyectos en `/proyectos` con evidencia | Portafolio | Media | Hecho 2026-10-21 (6 proyectos) | `docs/BUSINESS.md` |
-| BL-011 | Reemplazar ilustraciones abstractas por capturas reales de cada sistema (sin datos personales) | Credibilidad del portafolio | Alta | Pendiente | `src/config/projects.js` (`image`) |
-| BL-012 | Confirmar autorización de clientes para mencionarlos (TractoTec proformas, cliente de SisAlmacen) | Legal / confianza | Alta | Pendiente | `docs/BUSINESS.md` |
+| BL-011 | Reemplazar ilustraciones abstractas por capturas reales de cada sistema (sin datos personales) | Credibilidad del portafolio | Alta | Hecho 2026-10-21 salvo JarvisTec (no tiene interfaz gráfica). Capturas con datos de demostración en `public/images/projects/` | `src/config/projects.js` (`image`, `gallery`) |
+| BL-012 | Confirmar autorización de clientes para mencionarlos | Legal / confianza | Baja | En espera: por decisión del 2026-10-21 no se publican nombres de clientes; membretes y logos de clientes se difuminan en las capturas | `docs/BUSINESS.md` |
 | BL-013 | Revisar si conviene mantener el enlace a YouTube y la sección Insights con el nuevo posicionamiento | Coherencia de marca | Baja | Pendiente | `src/components/sections/TechInsights.js` |
 | BL-007 | Activar sección SoftNanTec Insights | Requiere canal de YouTube | Baja | Pendiente | `src/components/sections/TechInsights.js` |
 | BL-008 | Auto-hospedar fuentes y servir localmente las imágenes de Unsplash | Privacidad y rendimiento | Baja | Pendiente | `docs/PERFORMANCE.md` |

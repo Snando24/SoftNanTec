@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ArrowUpRight, CheckCircle2, Monitor } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { PROJECTS } from '../config/projects';
-import ProjectVisual from '../components/projects/ProjectVisual';
+import ProjectGallery from '../components/projects/ProjectGallery';
 import StatusBadge from '../components/projects/StatusBadge';
 import usePageMeta from '../hooks/usePageMeta';
 
@@ -62,7 +62,7 @@ const Projects = () => {
               className="grid lg:grid-cols-12 gap-8 lg:gap-12 p-6 lg:p-10 rounded-3xl border border-white/5 bg-brand-900/30"
             >
               <div className="lg:col-span-5">
-                <ProjectVisual project={project} className="aspect-[16/11] w-full" />
+                <ProjectGallery project={project} />
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.platforms.map((pl) => (
                     <span key={pl} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300">
