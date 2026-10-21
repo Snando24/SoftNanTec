@@ -1,12 +1,12 @@
 # BUSINESS.md
 
-> Última revisión: 2026-10-19. Solo datos presentes en el sitio; el resto `[POR DEFINIR]`.
+> Última revisión: 2026-10-21. Solo datos presentes en el sitio; el resto `[POR DEFINIR]`.
 
 # 1. Información general
 
 ## Nombre comercial
 
-SoftNanTec (en el sitio también "SoftNanTec Tech Consulting").
+SoftNanTec. Descriptor en el sitio: "Software a medida" (antes "Tech Consulting").
 
 ## Razón social
 
@@ -22,11 +22,11 @@ Perú — ubicación indicada en el sitio: Huancayo.
 
 # 2. Descripción del negocio
 
-Consultora de ingeniería de software enfocada en sistemas escalables, APIs y arquitectura (según textos del sitio).
+Estudio de desarrollo de software a medida para negocios y profesionales: automatización de documentos, sistemas de gestión, páginas web y tiendas en línea, apps de escritorio y móviles, automatización e integraciones. Reposicionado el 2026-10-21 a partir de los proyectos reales (antes: "sistemas escalables, APIs y arquitectura").
 
 # 3. Propuesta de valor
 
-Lema del sitio: "Construimos sistemas escalables de alto rendimiento" / "Construimos sistemas reales. Mostramos cómo lo hacemos."
+Lema del sitio: "Software a medida que resuelve el trabajo diario de su negocio." Diferenciales: trato directo con quien desarrolla, entregas que el cliente prueba, datos bajo control del cliente, sistemas documentados y probados.
 
 # 4. Clientes objetivo
 
@@ -44,12 +44,15 @@ Lema del sitio: "Construimos sistemas escalables de alto rendimiento" / "Constru
 
 # 5. Productos y servicios
 
-| Producto/Servicio | Descripción | Público | Estado |
+| Producto/Servicio | Descripción | Público | Evidencia |
 |---|---|---|---|
-| Desarrollo de APIs & Backend | Arquitecturas de alto rendimiento | B2B | Activo (según sitio) |
-| Diseño de Arquitectura | System design y planificación de escalabilidad | B2B | Activo (según sitio) |
-| Consultoría Técnica | Acompañamiento en decisiones técnicas | B2B | Activo (según sitio) |
-| Modernización de Sistemas | Migración de plataformas legacy | B2B | Activo (según sitio) |
+| Automatización de documentos | Proformas, cotizaciones, reportes y evaluaciones en PDF/Word | Pymes y profesionales | Generador de Proformas, Evaluación Descriptiva |
+| Sistemas de gestión a medida | Inventario, almacén, registros, control interno | Pymes | SisAlmacen, Evaluación Descriptiva |
+| Páginas web y tiendas en línea | Sitios con panel propio, cotización por WhatsApp, e-commerce | Pymes | TractoTec, StoreOS |
+| Apps de escritorio y móviles | Instalador Windows, PWA, APK Android | Pymes y profesionales | Generador de Proformas, SisAlmacen |
+| Automatización e integraciones | Flujos n8n, integraciones, asistentes con IA | Pymes | JarvisTec (laboratorio) |
+
+Fuente única en el código: `src/config/services.js`.
 
 # 6. Modelo de negocio
 
@@ -111,11 +114,18 @@ Declarados en el sitio: ingeniería orientada a producción, arquitectura escala
 
 # 12.1 Portafolio
 
-| Proyecto | Cliente | Tipo | Evidencia |
-|---|---|---|---|
-| TractoTec | TractoTec Servicios Generales (Huancayo) — traccionamiento de chasis, fabricación industrial y mantenimiento de maquinaria pesada | Sitio web corporativo diseñado y desarrollado por SoftNanTec (código en el repositorio `Snando24/Tractotec_Patron`, desde 2026-02). Funcionalidades: catálogo de servicios, portafolio con página de detalle por proyecto y galería, panel de administración de proyectos, cotización vía WhatsApp, sitemap y SEO local. Stack: React 19 + Vite 7 + Tailwind CSS 4, Supabase, Vercel (hosting y Analytics) | https://tractotec.com |
+Fuente única en el código: `src/config/projects.js`. Carpetas locales de cada proyecto en `Documents/SoftNanTec/`.
 
-Otros proyectos se añadirán cuando se cuente con evidencia publicable `[POR DEFINIR]`.
+| Proyecto | Cliente | Tipo | Estado | Stack | Carpeta |
+|---|---|---|---|---|---|
+| Generador de Proformas | TractoTec (taller y pintura) | Automatización de documentos; PC, PWA, APK | En uso | Python, ReportLab, python-docx, Capacitor | `APP_TALLER*` |
+| Sistema de Evaluación Descriptiva | Docentes de educación inicial (3 versiones personalizadas; no publicar nombres) | Escritorio Windows | En uso | TypeScript, Node.js, Electron, SQLite | `INICIAL *` |
+| SisAlmacen | Empresa con almacén propio (no publicar nombre sin autorización) | Escritorio Windows | En implementación | Python, PySide6, SQLAlchemy, SQLite | `SisAlmacen` |
+| TractoTec — sitio web | TractoTec Servicios Generales | Sitio web corporativo | En producción (https://tractotec.com) | React, Vite, Tailwind, Supabase, Vercel | repo `Snando24/Tractotec_Patron` |
+| StoreOS | Producto propio | SaaS multi-tienda | En desarrollo | React, TypeScript, Supabase | `StoreOS` |
+| JarvisTec | Laboratorio interno | Asistente por voz + n8n | Laboratorio | Java, Spring Boot, n8n, Node.js | `JarvisTec` |
+
+Pendiente: confirmar con cada cliente la autorización para mencionarlo y obtener capturas reales.
 
 # 13. Métricas de negocio
 

@@ -21,7 +21,7 @@ const Footer = () => {
               <span className="text-xl font-extrabold tracking-tight text-white font-display uppercase leading-none">SOFTNANTEC</span>
             </Link>
             <p className="text-sm text-slate-400 max-w-xs leading-relaxed">
-              Construimos sistemas escalables de alto rendimiento. Arquitecturas modernas y APIs robustas para entornos de producción.
+              Software a medida para negocios y profesionales: sistemas de gestión, automatización de documentos, apps y páginas web.
             </p>
           </div>
           
@@ -44,11 +44,11 @@ const Footer = () => {
           </div>
 
           <div className="text-right text-slate-400 text-xs">
-            <p>© 2026 SoftNanTec Tech Consulting.</p>
+            <p>© 2026 SoftNanTec.</p>
             <p className="mb-2">
               <Link to="/privacidad" className="hover:text-brand-green transition-colors underline-offset-4 hover:underline">Política de Privacidad</Link>
             </p>
-            <p>Construimos sistemas reales. Mostramos cómo lo hacemos.</p>
+            <p>Hecho en Huancayo, Perú.</p>
           </div>
         </div>
       </div>

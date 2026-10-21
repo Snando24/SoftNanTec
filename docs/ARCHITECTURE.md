@@ -68,10 +68,13 @@ SoftNanTec/
 │   ├── App.js               Rutas y layout global
 │   ├── index.js             Punto de entrada
 │   ├── config/site.js       URL del sitio, contacto, WhatsApp, redes, navegación
+│   ├── config/projects.js   Portafolio (fuente única para Inicio, Servicios y Proyectos)
+│   ├── config/services.js   Servicios (enlazan a proyectos por id)
 │   ├── hooks/usePageMeta.js Metadatos SEO por ruta
 │   ├── components/
 │   │   ├── layout/          Navbar, Footer
 │   │   ├── common/          ScrollToTop, WhatsAppWidget
+│   │   ├── projects/        ProjectCard, ProjectVisual (ilustración abstracta), StatusBadge
 │   │   └── sections/        TechInsights (desactivado)
 │   ├── pages/               Home, Services, About, Projects, Contact, PrivacyPolicy, NotFound
 │   └── styles/index.css     Tailwind + utilidades (.glass, .neon-text-gradient…)
@@ -92,6 +95,8 @@ SoftNanTec/
 | Es un bloque de contenido reutilizable | `src/components/sections/` |
 | Es un componente pequeño o utilitario | `src/components/common/` |
 | Es un dato que puede cambiar (teléfono, links) | `src/config/site.js` |
+| Es un proyecto del portafolio | `src/config/projects.js` |
+| Es un servicio | `src/config/services.js` |
 | Es CSS global | `src/styles/` |
 
 ## 6. Frontend
@@ -209,6 +214,7 @@ No hay tests. `CI=true npm run build` (advertencias de ESLint tratadas como erro
 
 ## 24. Decisiones arquitectónicas
 
+- 2026-10-21 — Reposicionamiento (rama `rediseno-contenido`): portafolio y servicios centralizados en `config/projects.js` y `config/services.js`; `ScrollToTop` respeta anclas (`/proyectos#id`, `/servicios#id`).
 - 2026-10-19 — Reestructuración: repositorio aplanado a la raíz `SoftNanTec/`; componentes agrupados en `layout/`, `common/`, `sections/`; CSS en `styles/`; configuración centralizada en `config/site.js`. Se unificó el número de WhatsApp: antes había un número de ejemplo (`34912345678`) en widget, footer e inicio, y el real (`51906098021`) solo en contacto.
 - 2026-10-19 — Limpieza: íconos, favicon e imagen Open Graph generados a partir de `assets/brand/Logo_Madre.png`; eliminadas dependencias sin uso (`web-vitals`, `@testing-library/*`, `@tailwindcss/postcss`), colores Tailwind sin uso (`brand-800`, `accent`, `neon.*`, `primary`, `secondary`, `dark`), clase `.glass-light`, export `SITE` y la sección de estadísticas de Inicio; Google Fonts pasa de `@import` en CSS a `<link>` en `index.html`.
 

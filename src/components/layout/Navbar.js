@@ -40,7 +40,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-extrabold tracking-tight text-white font-display uppercase leading-none">SOFTNANTEC</span>
-            <span className="text-[10px] text-brand-green font-bold tracking-[0.2em] uppercase">Tech Consulting</span>
+            <span className="text-[10px] text-brand-green font-bold tracking-[0.2em] uppercase">Software a medida</span>
           </div>
         </Link>
 
