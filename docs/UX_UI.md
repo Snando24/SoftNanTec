@@ -36,7 +36,8 @@ Definido en `tailwind.config.js` y `src/styles/index.css`:
 | WhatsAppWidget | Botón flotante | default/hover + tooltip | Sí |
 | Menú móvil | Toggle | abierto/cerrado | Sí (aria) |
 | ProjectCard | Tarjeta compacta de proyecto | default/hover/focus | Sí |
-| ProjectVisual | Ilustración abstracta por tipo (no es captura real) o imagen real si existe | — | Decorativa (`aria-hidden`) |
+| ProjectVisual | Captura real (`image`) o, si no hay, ilustración abstracta por tipo | — | Captura con `alt`; ilustración `aria-hidden` |
+| ProjectGallery | Captura principal + miniaturas (`gallery`), enlace para ampliar | `aria-pressed` en miniaturas | Sí |
 | StatusBadge | En uso/En producción (lima), En desarrollo/implementación (cian), Laboratorio (gris) | — | Texto visible |
 | Filtro de proyectos | Botones píldora | `aria-pressed` | Sí |
 

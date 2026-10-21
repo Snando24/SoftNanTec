@@ -118,14 +118,14 @@ Fuente única en el código: `src/config/projects.js`. Carpetas locales de cada 
 
 | Proyecto | Cliente | Tipo | Estado | Stack | Carpeta |
 |---|---|---|---|---|---|
-| Generador de Proformas | TractoTec (taller y pintura) | Automatización de documentos; PC, PWA, APK | En uso | Python, ReportLab, python-docx, Capacitor | `APP_TALLER*` |
+| Generador de Proformas | Talleres de vehículos y maquinaria pesada (3 versiones: taller, pintura y variante corporativa para otro taller) | Automatización de documentos; PC, PWA, APK | En uso | Python, ReportLab, python-docx, Capacitor | `APP_TALLER`, `APP_TALLER_PINTURA`, `APP_TALLER_PINTURA_JIMMY` |
 | Sistema de Evaluación Descriptiva | Docentes de educación inicial (3 versiones personalizadas; no publicar nombres) | Escritorio Windows | En uso | TypeScript, Node.js, Electron, SQLite | `INICIAL *` |
 | SisAlmacen | Empresa con almacén propio (no publicar nombre sin autorización) | Escritorio Windows | En implementación | Python, PySide6, SQLAlchemy, SQLite | `SisAlmacen` |
 | TractoTec — sitio web | TractoTec Servicios Generales | Sitio web corporativo | En producción (https://tractotec.com) | React, Vite, Tailwind, Supabase, Vercel | repo `Snando24/Tractotec_Patron` |
 | StoreOS | Producto propio | SaaS multi-tienda | En desarrollo | React, TypeScript, Supabase | `StoreOS` |
 | JarvisTec | Laboratorio interno | Asistente por voz + n8n | Laboratorio | Java, Spring Boot, n8n, Node.js | `JarvisTec` |
 
-Pendiente: confirmar con cada cliente la autorización para mencionarlo y obtener capturas reales.
+Decisión 2026-10-21: en el sitio no se publican nombres de clientes (salvo el título del sitio web TractoTec, que es público). Las capturas (`public/images/projects/`) se tomaron ejecutando cada sistema con datos de demostración; logos, membretes y cuentas bancarias de clientes se difuminaron u ocultaron.
 
 # 13. Métricas de negocio
 

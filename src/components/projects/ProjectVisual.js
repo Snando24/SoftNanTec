@@ -10,15 +10,16 @@ const VISUALS = {
   automation: { Icon: Bot, label: 'Asistente', rows: ['Comando de voz', 'Intención', 'Rutina'], accent: 'IA · n8n' },
 };
 
-const ProjectVisual = ({ project, className = '' }) => {
-  if (project.image) {
+const ProjectVisual = ({ project, className = '', src, alt }) => {
+  const image = src || project.image;
+  if (image) {
     return (
       <div className={`relative overflow-hidden rounded-2xl border border-white/10 bg-brand-900 ${className}`}>
         <img
-          src={project.image}
-          alt={`Vista del proyecto ${project.title}`}
+          src={image}
+          alt={alt || `Captura del proyecto ${project.title}`}
           loading="lazy"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-left-top"
         />
       </div>
     );
